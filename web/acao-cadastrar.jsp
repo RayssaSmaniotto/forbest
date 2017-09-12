@@ -5,6 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UsuarioModel usuario = new UsuarioModel();
+    usuario.setCodigo(Integer.parseInt(request.getParameter("codigo")));
     usuario.setNome(request.getParameter("nome"));
     usuario.setSobrenome(request.getParameter("sobrenome"));
     usuario.setIdade(Integer.parseInt(request.getParameter("idade")));
@@ -22,17 +23,18 @@
     usuario.setSenha(request.getParameter("senha"));
     usuario.setCelular(request.getParameter("celular"));
     usuario.setGenero(request.getParameter("genero").charAt(0));
-    usuario.setCelular(request.getParameter("celular"));
-    usuario.setCelular(request.getParameter("celular"));
+    usuario.setBiografia(request.getParameter("biografia"));
+//  usuario.setfoto();
+//  usuario.setGaleria();
+    usuario.setUrlFacebook(request.getParameter("url_facebook"));
+    usuario.setUrlLinkedin(request.getParameter("url_linkedin"));
+    usuario.setUrlTwitter(request.getParameter("url_twitter"));
+    usuario.setUrlInstagram(request.getParameter("url_instagram"));
+    usuario.setNumeroLocal(Integer.parseInt(request.getParameter("numero_local")));
+    int id = UsuarioDAO.inserir(usuario);
+    if(id != -1){
+        response.sendRedirect("acao-alterar.jsp?id=" + id);
+    }else{
 
-
-
-
-%>  private int numeroLocal,;
-    private String  , , biografia, urlFacebook, urlLinkedin, urlTwitter, urlInstagram;
-    private char genero;
-    private Blob foto, galeria;
-
-
-  ,  biografia, foto, galeria, "
-+ "url_facebook, url_linkedin, url_twitter, url_instagram, numero_local)
+    }
+%>
