@@ -28,7 +28,7 @@ public class UsuarioDAO {
         }
     }
 
-    public static void alterar(UsuarioModel usuarioModel) {
+    public static int alterar(UsuarioModel usuarioModel) {
         try {
             String sql = "UPDATE usuarios SET nome = ?, sobrenome = ?, idade = ?, data_nascimento = ?, email = ?, "
                     + "razao_social = ?, cnpj = ?, cpf = ?, cep = ?, numero = ?, logradouro = ?, estado = ?, cidade = ?, bairro = ?, "
@@ -66,6 +66,7 @@ public class UsuarioDAO {
         } finally {
             Conexao.desconectar();
         }
+        return -1;
     }
 
     public static int inserir(UsuarioModel usuarioModel) {
