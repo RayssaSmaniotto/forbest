@@ -8,9 +8,26 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>4Best</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-  $END$
+  <div class="menu-superior">
+    <div class="menu-superior-logo">
+      <img src="Assets/imagens/Logo-For-Best-60x72.png">
+    </div>
+
+    <div class="menu-superior-itens">
+      <a class="entrar" href="">Entrar</a>
+      <a class="cadastra" href="#">Inscreva-se</a>
+    </div>
+
+    <div class="menu-superior-frase">
+      <h1>Ajude alguém, faça sua parte!</h1>
+    </div>
+
+  </div>
+
   </body>
 </html>
