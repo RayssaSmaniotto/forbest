@@ -15,7 +15,7 @@
   <body>
   <div class="menu-superior">
     <div class="menu-superior-logo">
-      <img src="Assets/imagens/Logo-For-Best-60x72.png">
+      <img src="assets/imagens/Logo-For-Best-60x72.png">
     </div>
 
     <div class="menu-superior-itens">
