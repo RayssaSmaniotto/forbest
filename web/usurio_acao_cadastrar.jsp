@@ -1,16 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Henrique Gioppo
-  Date: 12/09/2017
-  Time: 15:41
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="model.UsuarioModel"%>
 <%@ page import="dao.UsuarioDAO" %>
+<%@ page import="model.UsuarioModel" %>
+<%@ page import="java.util.zip.DataFormatException" %>
 <%@ page import="java.sql.Date" %>
-<%@ page import="java.sql.Blob" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UsuarioModel usuario = new UsuarioModel();
     usuario.setCodigo(Integer.parseInt(request.getParameter("codigo")));
@@ -39,9 +31,9 @@
     usuario.setUrlTwitter(request.getParameter("url_twitter"));
     usuario.setUrlInstagram(request.getParameter("url_instagram"));
     usuario.setNumeroLocal(Integer.parseInt(request.getParameter("numero_local")));
-    int codigo = UsuarioDAO.alterar(usuario);
-    if(codigo != -1){
-        response.sendRedirect("acao-alterar.jsp?id=" + usuario.getCodigo());
+    int id = UsuarioDAO.inserir(usuario);
+    if(id != -1){
+        response.sendRedirect("usuario_acao_alterar.jsp?id=" + id);
     }else{
 
     }
