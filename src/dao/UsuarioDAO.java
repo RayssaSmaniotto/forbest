@@ -211,4 +211,22 @@ public class UsuarioDAO {
         return usuario;
     }
 
+    public static boolean realizarLogin(String email, String senha) {
+        String sql = "SELECT id FROM alunos WHERE email = ? AND senha = ?";
+        try {
+            PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
+            ps.setString(1, email);
+            ps.setString(2, senha);
+            ps.execute();
+            ResultSet resultados = ps.getResultSet();
+            if (resultados.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.desconectar();
+        }
+        return false;
+    }
 }
