@@ -10,11 +10,7 @@
 <%@ page import="dao.UsuarioDAO" %>
 <%@ page import="java.sql.Date" %>
 <%@ page import="java.sql.Blob" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+
 <%
     UsuarioModel usuario = new UsuarioModel();
     usuario.setCodigo(Integer.parseInt(request.getParameter("codigo")));
@@ -50,6 +46,3 @@
 
     }
 %>
-
-</body>
-</html>
