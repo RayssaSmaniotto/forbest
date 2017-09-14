@@ -104,7 +104,7 @@ public class UsuarioDAO {
             ps.setInt(25, usuarioModel.getNumeroLocal());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
-            while (rs.next()) {
+            if (rs.next()) {
                 int codigo = rs.getInt(1);
                 return codigo;
             }

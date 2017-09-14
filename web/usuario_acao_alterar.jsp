@@ -33,10 +33,10 @@
     usuario.setBiografia(request.getParameter("biografia"));
 //  usuario.setfoto();
 //  usuario.setGaleria();
-    usuario.setUrlFacebook(request.getParameter("url_facebook"));
-    usuario.setUrlLinkedin(request.getParameter("url_linkedin"));
-    usuario.setUrlTwitter(request.getParameter("url_twitter"));
-    usuario.setUrlInstagram(request.getParameter("url_instagram"));
+//  usuario.setUrlFacebook(request.getParameter("url_facebook"));
+//  usuario.setUrlLinkedin(request.getParameter("url_linkedin"));
+//  usuario.setUrlTwitter(request.getParameter("url_twitter"));
+//  usuario.setUrlInstagram(request.getParameter("url_instagram"));
     usuario.setNumeroLocal(Integer.parseInt(request.getParameter("numero_local")));
     int codigo = UsuarioDAO.alterar(usuario);
     if(codigo != -1){
