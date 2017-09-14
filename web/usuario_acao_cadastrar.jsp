@@ -5,36 +5,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UsuarioModel usuario = new UsuarioModel();
-    usuario.setCodigo(Integer.parseInt(request.getParameter("codigo")));
-    usuario.setNome(request.getParameter("nome"));
-    usuario.setSobrenome(request.getParameter("sobrenome"));
-    usuario.setIdade(Integer.parseInt(request.getParameter("idade")));
-    usuario.setDataNascimento(Date.valueOf(request.getParameter("data_nascimento")));
-    usuario.setEmail(request.getParameter("email"));
-    usuario.setRazaoSocial(request.getParameter("razao_social"));
-    usuario.setCnpj(request.getParameter("cnpj"));
-    usuario.setCpf(request.getParameter("cpf"));
-    usuario.setCep(request.getParameter("cep"));
-    usuario.setNumero(Integer.parseInt(request.getParameter("numero")));
-    usuario.setLogradouro(request.getParameter("logradouro"));
-    usuario.setEstado(request.getParameter("estado"));
-    usuario.setCidade(request.getParameter("cidade"));
-    usuario.setBairro(request.getParameter("bairro"));
-    usuario.setSenha(request.getParameter("senha"));
-    usuario.setCelular(request.getParameter("celular"));
-    usuario.setGenero(request.getParameter("genero").charAt(0));
-    usuario.setBiografia(request.getParameter("biografia"));
+    usuario.setNome(request.getParameter("usuario-nome"));
+    usuario.setSobrenome(request.getParameter("usuario-sobrenome"));
+    usuario.setIdade(Integer.parseInt(request.getParameter("usuario-idade")));
+    usuario.setDataNascimento(Date.valueOf(request.getParameter("usuario-data-nascimento")));
+    usuario.setEmail(request.getParameter("usuario-email"));
+    usuario.setCpf(request.getParameter("usuario-cpf"));
+    usuario.setCep(request.getParameter("usuario-cep"));
+    usuario.setNumero(Integer.parseInt(request.getParameter("usuario-numero")));
+    usuario.setLogradouro(request.getParameter("usuario-logradouro"));
+    usuario.setEstado(request.getParameter("usuario-estado"));
+    usuario.setCidade(request.getParameter("usuario-cidade"));
+    usuario.setBairro(request.getParameter("usuario-bairro"));
+    usuario.setSenha(request.getParameter("usuario-senha"));
+    usuario.setCelular(request.getParameter("usuario-celular"));
+    usuario.setGenero(request.getParameter("usuario-genero").charAt(0));
+    usuario.setBiografia(request.getParameter("usuario-biografia"));
 //  usuario.setfoto();
 //  usuario.setGaleria();
-    usuario.setUrlFacebook(request.getParameter("url_facebook"));
-    usuario.setUrlLinkedin(request.getParameter("url_linkedin"));
-    usuario.setUrlTwitter(request.getParameter("url_twitter"));
-    usuario.setUrlInstagram(request.getParameter("url_instagram"));
-    usuario.setNumeroLocal(Integer.parseInt(request.getParameter("numero_local")));
+//  usuario.setUrlFacebook(request.getParameter("usuario-url-facebook"));
+//  usuario.setUrlLinkedin(request.getParameter("usuario-url-linkedin"));
+//  usuario.setUrlTwitter(request.getParameter("usuario-url-twitter"));
+//  usuario.setUrlInstagram(request.getParameter("usuario-url-instagram"));
+    usuario.setNumeroLocal(Integer.parseInt(request.getParameter("usuario-numero-local")));
     int id = UsuarioDAO.inserir(usuario);
-    if(id != -1){
-        response.sendRedirect("usuario_acao_alterar.jsp?id=" + id);
-    }else{
+    if (id != -1) {
+        response.sendRedirect("usuario_alterar.jsp?id=" + id);
+    } else {
 
     }
 %>
