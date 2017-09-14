@@ -33,7 +33,7 @@
     usuario.setNumeroLocal(Integer.parseInt(request.getParameter("numero_local")));
     int id = UsuarioDAO.inserir(usuario);
     if(id != -1){
-        response.sendRedirect("acao-alterar.jsp?id=" + id);
+        response.sendRedirect("usuario_acao_alterar.jsp?id=" + id);
     }else{
 
     }
