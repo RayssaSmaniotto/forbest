@@ -40,7 +40,7 @@
     int id = UsuarioDAO.inserir(usuario);
 
     if (id != -1) {
-        response.sendRedirect("usuario_alterar.jsp?id=" + id);
+        response.sendRedirect("perfil.jsp?id=" + id);
     } else {
 
     }

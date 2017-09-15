@@ -45,7 +45,6 @@
             <div>
                 <label><%= usuarioModel.getEmail() %></label>
             </div>
-
             <div>
                 <label><%= usuarioModel.getCpf() %></label>
             </div>
@@ -66,9 +65,6 @@
             </div>
             <div>
                 <label><%= usuarioModel.getBairro() %></label>
-            </div>
-            <div>
-                <label><%= usuarioModel.getSenha() %></label>
             </div>
             <div>
                 <label><%= usuarioModel.getCelular() %></label>
