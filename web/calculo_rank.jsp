@@ -12,15 +12,14 @@
     UsuarioModel usuario = new UsuarioModel();
     String rankTotal;
     String rankMensal;
-    String rankPassado;
-    double pontuacaoMensal = 0;
-    double pontuacaoTotal = 0;
+    int pontuacaoMensal = 0;
+    int pontuacaoTotal = 0;
     int repeticao = 0;
 
-    if(prestacao = false) {
-        if(repeticao == 0) {
-            pontuacaoMensal = -1;
-            pontuacaoTotal = -1;
+    if(repeticao == 0) {
+        pontuacaoMensal = -1;
+        pontuacaoTotal = -1;
+        if(prestacao = false) {
             rankMensal = "Instituição não confiavel";
             rankTotal = "Instituição não confiavel";
             repeticao = 1;
@@ -30,10 +29,67 @@
             usuario.setSenha("snandromedaCAPIVARA");
         }
 
-    if(prestacao = true) {
-            pontuacaoMensal = qntLikes;
-            pontuacaoTotal += qntLikes;
+        if(prestacao = true) {
+                pontuacaoMensal = qntLikes;
+                pontuacaoTotal += qntLikes;
+        }
     }
 
+    switch (pontuacaoTotal) {
+
+        case 1 :
+            rankTotal = "Iniciante";
+            break;
+
+        case 10:
+            rankTotal = "Integrante";
+            break;
+
+        case 20:
+            rankTotal = "Integrante Participativo";
+
+    }
+
+    switch (pontuacaoMensal) {
+
+        case 1:
+            rankMensal = "Péssimo";
+            break;
+
+        case 2:
+            rankMensal = "Péssimo";
+            break;
+
+        case 3:
+            rankMensal = "Muito Ruim";
+            break;
+
+        case 4:
+            rankMensal = "Ruim";
+            break;
+
+        case 5:
+            rankMensal = "Ruim";
+            break;
+
+        case 6:
+            rankMensal = "Mediano";
+            break;
+
+        case 7:
+            rankMensal = "Bom";
+            break;
+
+        case 8:
+            rankMensal = "Muito Bom";
+            break;
+
+        case 9:
+            rankMensal = "Muito Bom";
+            break;
+
+        case 10:
+            rankMensal = "Perfeito";
+            break;
     }
 %>
