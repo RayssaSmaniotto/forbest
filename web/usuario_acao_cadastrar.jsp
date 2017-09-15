@@ -5,6 +5,7 @@
 <%@ page import="java.util.Calendar" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+
     UsuarioModel usuario = new UsuarioModel();
     usuario.setNome(request.getParameter("usuario-nome"));
     usuario.setSobrenome(request.getParameter("usuario-sobrenome"));
@@ -37,6 +38,7 @@
 //  usuario.setUrlTwitter(request.getParameter("usuario-url-twitter"));
 //  usuario.setUrlInstagram(request.getParameter("usuario-url-instagram"));
     int id = UsuarioDAO.inserir(usuario);
+
     if (id != -1) {
         response.sendRedirect("usuario_alterar.jsp?id=" + id);
     } else {

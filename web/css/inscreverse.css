@@ -1,0 +1,38 @@
+.entrar-box{
+    width: 250px;
+    height:400px;
+    margin-top: 100px;
+    margin-left: 500px;
+
+}
+
+#cadastro_nome{
+    width: 220px;
+    height: 30px;
+    font-size: 18;
+}
+
+#cadastro_email{
+    width: 220px;
+    height: 30px;
+    font-size: 18;
+}
+
+#cadastro_senha{
+    width: 220px;
+    height: 30px;
+    font-size: 18;
+}
+
+
+#botao_entrar{
+    width: 220px;
+    height: 30px;
+    font-size: 18;
+}
+
+#codicao_termos{
+
+    font-size: 14;
+
+}
