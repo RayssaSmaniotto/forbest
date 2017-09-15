@@ -40,9 +40,8 @@ public class PostDAO {
             ps.setDate(3, postModel.getDataEvento());
             ps.setInt(4, postModel.getUsuario().getCodigo());
             ps.setInt(5, postModel.getApoios());
-
-            ps.setString(7, postModel.getStatus());
-            ps.setInt(8, postModel.getCodigo());
+            ps.setString(6, postModel.getStatus());
+            ps.setInt(7, postModel.getCodigo());
             int resultado = ps.executeUpdate();
 
          } catch (SQLException e) {
@@ -134,5 +133,14 @@ public class PostDAO {
             Conexao.desconectar();
         }
         return post;
+    }
+
+    public static int retornarQuantidadeLikes(int codigo){
+        String sql = "COUNT(id) FROM post SET apoios = ? WHERE id = ?";
+        return 0;
+    }
+
+    public static void darLike(int codigo){
+
     }
 }

@@ -16,28 +16,28 @@
 
     <div class="titulo">
         <label for="post-titulo">Titulo</label>
-        <input type="text" name="post-titulo" id="post-titulo">
+        <input type="text" required="required" name="post-titulo" id="post-titulo">
     </div>
 
     <div class="texto">
         <label for="post-texto">Descrição</label>
-        <input type="text" name="post-texto" id="post-texto">
+        <input type="text" required="required" name="post-texto" id="post-texto">
 
     </div>
 
     <div class="local">
         <label for="post-local">Local</label>
-        <input type="text" name="post-local" id="post-local">
+        <input type="text" required="required" name="post-local" id="post-local">
     </div>
 
     <div class="post-horario">
         <label for="post-horario">Horario</label>
-        <input type="time" name="horario" id="post-horario">
+        <input type="time" required="required" name="horario" id="post-horario">
     </div>
 
     <div class="data">
         <label for="post-data">Data</label>
-        <input type="date" name="post-data" id="post-data">
+        <input type="date" required="required" name="post-data" id="post-data">
     </div>
 
     <div class="likes">

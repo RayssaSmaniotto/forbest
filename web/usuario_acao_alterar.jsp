@@ -40,7 +40,7 @@
     usuario.setNumeroLocal(Integer.parseInt(request.getParameter("numero_local")));
     int codigo = UsuarioDAO.alterar(usuario);
     if(codigo != -1){
-        response.sendRedirect("usuario_acao_alterar.jsp?id=" + usuario.getCodigo());
+        response.sendRedirect("usuario_alterar.jsp?id=" + usuario.getCodigo());
     }else{
 
     }
