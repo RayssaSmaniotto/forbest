@@ -1,3 +1,5 @@
+<%@ page import="model.UsuarioModel" %>
+<%@ page import="dao.UsuarioDAO" %>
 <html>
 
 <head>
@@ -5,48 +7,49 @@
 </head>
 
 <body>
+
 <form method="post" action="usuario_acao_cadastrar.jsp">
     <div class="campos">
         <div>
             <label for="usuario-nome">Nome</label>
-            <input type="text" name="usuario-nome" id="usuario-nome">
+            <input type="text" name="usuario-nome" id="usuario-nome" required="required">
         </div>
         <div>
             <label for="usuario-sobrenome">Sobrenome</label>
-            <input type="text" name="usuario-sobrenome" id="usuario-sobrenome">
+            <input type="text" name="usuario-sobrenome" id="usuario-sobrenome" required="required">
         </div>
         <div>
             <label for="usuario-idade">Idade</label>
-            <input type="number" name="usuario-idade" id="usuario-idade">
+            <input type="number" name="usuario-idade" id="usuario-idade" required="required">
         </div>
         <div>
             <label for="usuario-data-nascimento">Data de Nacimento</label>
-            <input type="date" name="usuario-data-nascimento" id="usuario-data-nascimento">
+            <input type="date" name="usuario-data-nascimento" id="usuario-data-nascimento" required="required">
         </div>
         <div>
             <label for="usuario-email">E-mail</label>
-            <input type="text" name="usuario-email" id="usuario-email">
+            <input type="text" name="usuario-email" id="usuario-email" required="required">
         </div>
 
         <div>
             <label for="usuario-cpf">CPF</label>
-            <input type="text" name="usuario-cpf" id="usuario-cpf">
+            <input type="text" name="usuario-cpf" id="usuario-cpf" required="required">
         </div>
         <div>
             <label for="usuario-cep">CEP</label>
-            <input type="text" name="usuario-cep" id="usuario-cep">
+            <input type="text" name="usuario-cep" id="usuario-cep" required="required">
         </div>
         <div>
-            <label for="usuario-rua">Rua</label>
-            <input type="text" name="usuario-rua" id="usuario-rua">
+            <label for="usuario-logradouro">Rua</label>
+            <input type="text" name="usuario-logradouro" id="usuario-logradouro" required="required">
         </div>
         <div>
             <label for="usuario-numero-local">Numero Da Casa</label>
-            <input type="number" name="usuario-numero-local" id="usuario-numero-local">
+            <input type="number" name="usuario-numero-local" id="usuario-numero-local" required="required">
         </div>
         <div>
             <label for="usuario-estado">Estado</label>
-            <select name="usuario-estado" id="usuario-estado">
+            <select name="usuario-estado" id="usuario-estado" required="required">
                 <option>AC</option>
                 <option>AL</option>
                 <option>AP</option>
@@ -78,19 +81,19 @@
         </div>
         <div>
             <label for="usuario-cidade">Cidade</label>
-            <input type="text" name="usuario-cidade" id="usuario-cidade">
+            <input type="text" name="usuario-cidade" id="usuario-cidade" required="required">
         </div>
         <div>
             <label for="usuario-bairro">Bairro</label>
-            <input type="text" name="usuario-bairro" id="usuario-bairro">
+            <input type="text" name="usuario-bairro" id="usuario-bairro" required="required">
         </div>
         <div>
             <label for="usuario-senha">Senha</label>
-            <input type="password" name="usuario-senha" id="usuario-senha">
+            <input type="password" name="usuario-senha" id="usuario-senha" required="required">
         </div>
         <div>
             <label for="usuario-celular">Celular</label>
-            <input type="text" name="usuario-celular" id="usuario-celular">
+            <input type="text" name="usuario-celular" id="usuario-celular" required="required">
         </div>
         <div>
             <label for="usuario-genero">Genero</label>
@@ -99,7 +102,6 @@
                 <option>Feminino</option>
             </select>
         </div>
-
         <input class="cadastrar-botao" type="submit" value="Salvar">
     </div>
 </form>

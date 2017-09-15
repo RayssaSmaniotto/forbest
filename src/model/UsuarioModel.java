@@ -222,7 +222,5 @@ public class UsuarioModel {
     public void setGenero(char genero) {
         this.genero = genero;
     }
-    
-    
-    
+
 }

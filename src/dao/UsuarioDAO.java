@@ -75,8 +75,7 @@ public class UsuarioDAO {
                 + "url_facebook, url_linkedin, url_twitter, url_instagram, numero_local) VALUES (?, ?, ?,  ?,  ?, ?, ?, ?, ?, ?, ?, "
                 + "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         try {
-            PreparedStatement ps = Conexao.conectar()
-                    .prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = Conexao.conectar().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, usuarioModel.getNome());
             ps.setString(2, usuarioModel.getSobrenome());
             ps.setInt(3, usuarioModel.getIdade());
@@ -104,7 +103,7 @@ public class UsuarioDAO {
             ps.setInt(25, usuarioModel.getNumeroLocal());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
-            while (rs.next()) {
+            if (rs.next()) {
                 int codigo = rs.getInt(1);
                 return codigo;
             }

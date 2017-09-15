@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class Conexao {
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String HOST = "jdbc:mysql://localhost/for_best";
+    private static final String HOST = "jdbc:mysql://localhost/for_best?useTimezone=true&serverTimezone=UTC";
     private static final String USUARIO = "root";
     private static final String SENHA = "";
     private static Connection conexao;
