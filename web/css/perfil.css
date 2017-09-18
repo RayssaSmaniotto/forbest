@@ -1,13 +1,13 @@
-.body{
+html, body{
     margin: 0;
     padding: 0;
 }
 
 .menu-superior{
-    background-image: url("");
+    background-image: url("4bestbackground-top.jpg");
     height: 62px;
-    margin:-9;
-    width: 102%;
+    margin: 0px;
+    width: 100%;
 }
 .lupa{
     text-decoration: none;
@@ -16,7 +16,7 @@
     position: relative;
 }
 .campo{
-    padding-top: 15;
+    padding-top: 15px;
     text-align: center;
 
 }
@@ -30,7 +30,7 @@
 
 }
 
-.procura: hover{
+.procura:hover{
     border: none;
 }
 
@@ -47,7 +47,7 @@
 
 #logo{
     height: 45px;
-    width: 45px;
+    width: 38px;
 
 }
 .icons{
