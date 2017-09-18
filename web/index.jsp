@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -11,15 +10,6 @@
     <div class="menu-superior-logo">
       <img src="assets/imagens/Logo-For-Best-60x72.png">
     </div>
-=======
-<%--
-  Created by IntelliJ IDEA.
-  User: 98971
-  Date: 12/09/2017
-  Time: 14:43
-  To change this template use File | Settings | File Templates.
---%>
->>>>>>> d6616166f09f692f68913f9e93d324ad39fec8cc
 
 <html>
 <head>
@@ -39,7 +29,7 @@
   </div>
 
   <div class="menu-superior-frase">
-    <h1>Ajude alguehm, faca sua parte!</h1>
+    <h1>Ajude alguem, faca sua parte!</h1>
   </div>
 
 </div>
