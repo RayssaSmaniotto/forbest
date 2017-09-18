@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: 98971
@@ -7,7 +8,6 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
   <title>4Best</title>
@@ -19,6 +19,7 @@
 
 
 <div class="Geral">
+
 
   <div class="menu-superior">
 
