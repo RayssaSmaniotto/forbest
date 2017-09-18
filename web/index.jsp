@@ -4,7 +4,7 @@
   <title>4Best</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
       <a class="botao-amarelo-preto" href="inscreverse.html">Inscreva-se</a>
     </div>
     <div class="menu-superior-logo">
-      <img src="/assets/image/Logo-For-Best-400x229.png">
+      <img src="assets/image/Logo-For-Best-400x229.png">
     </div>
     <div class="frase-efeito">
       <h1>construa um mundo melhor!</h1>

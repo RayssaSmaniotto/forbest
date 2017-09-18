@@ -51,7 +51,7 @@ html, body {
 }
 
 .menu-superior{
-    background-image: url("4bestbackground.gif");
+    background-image: url("assets/image/4bestbackground.gif");
     background-size:cover;
     height: 650px;
     width: 100%;
@@ -88,8 +88,8 @@ html, body {
     margin-top: 27px;
     margin-left: 475px;
 
-    width:400;
-    height: 230;
+    width:400px;
+    height: 230px;
     float:left;
 }
 
