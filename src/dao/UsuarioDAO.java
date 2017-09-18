@@ -1,12 +1,14 @@
 package dao;
 
 import database.Conexao;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
 import model.UsuarioModel;
 
 /**
@@ -192,7 +194,10 @@ public class UsuarioDAO {
                 usuario.setBairro(resultSet.getString("bairro"));
                 usuario.setSenha(resultSet.getString("senha"));
                 usuario.setCelular(resultSet.getString("celular"));
-                usuario.setGenero(resultSet.getString("genero").charAt(0));
+                if (resultSet.getString("genero") != null) {
+                    usuario.setGenero(resultSet.getString("genero").charAt(0));
+
+                }
                 usuario.setBiografia(resultSet.getString("biografia"));
                 usuario.setFoto(resultSet.getBlob("foto"));
                 usuario.setGaleria(resultSet.getBlob("galeria"));
@@ -210,8 +215,8 @@ public class UsuarioDAO {
         return usuario;
     }
 
-    public static boolean realizarLogin(String email, String senha) {
-        String sql = "SELECT id FROM alunos WHERE email = ? AND senha = ?";
+    public static UsuarioModel realizarLogin(String email, String senha) {
+        String sql = "SELECT codigo FROM usuarios WHERE email = ? AND senha = ?";
         try {
             PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
             ps.setString(1, email);
@@ -219,13 +224,13 @@ public class UsuarioDAO {
             ps.execute();
             ResultSet resultados = ps.getResultSet();
             if (resultados.next()) {
-                return true;
+                return UsuarioDAO.buscarUsuarioPorId(resultados.getInt("codigo"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             Conexao.desconectar();
         }
-        return false;
+        return null;
     }
 }

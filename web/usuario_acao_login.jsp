@@ -1,14 +1,15 @@
 <%@ page import="dao.UsuarioDAO" %>
+<%@ page import="model.UsuarioModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String email = request.getParameter("email");
-    String senha = request.getParameter("senha");
-    boolean logado = UsuarioDAO.realizarLogin(email, senha);
-    if (logado){
-        session.setAttribute("email", email);
-        response.sendRedirect("bem_vindo_usuario.jsp");
+    String email = request.getParameter("usuario_nome");
+    String senha = request.getParameter("usuario_senha");
+    UsuarioModel usuario = UsuarioDAO.realizarLogin(email, senha);
+    if (usuario != null){
+        session.setAttribute("usuario", usuario);
+        response.sendRedirect("feed.jsp");
     } else {
-        session.removeAttribute("email");
-        response.sendRedirect("usuario_login.jsp");
+        session.removeAttribute("usuario");
+        response.sendRedirect("entrar.jsp");
     }
 %>

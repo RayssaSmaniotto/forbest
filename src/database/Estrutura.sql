@@ -29,7 +29,7 @@ CREATE TABLE usuarios(
 	url_linkedin VARCHAR(255),
 	url_twitter VARCHAR(255),
 	url_instagram VARCHAR(255),
-    numero_local INT(20) 
+  numero_local INT(20)
 );
 
 CREATE TABLE tags(

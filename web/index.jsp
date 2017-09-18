@@ -38,8 +38,28 @@
             <a class="botao-transparente" href="saibamais.html">saiba mais</a>
         </div>
 
+<<<<<<< HEAD
         <div class="info-meio">
             <div class="info-meio2-coluna2">
+=======
+    <div class="menu-superior-itens">
+      <a class="idioma-texto" href="sobre.jsp">sobre</a>
+      <a class="idioma-texto2" href="contato.jsp">contato</a>
+      <a class="botao-amarelo-preto" href="entrar.jsp">Entrar</a>
+      <a class="botao-amarelo-preto" href="inscreverse.jsp">Inscreva-se</a>
+    </div>
+    <div class="menu-superior-logo">
+      <img src="assets/image/Logo-For-Best-400x229.png">
+    </div>
+    <div class="frase-efeito">
+      <h1>construa um mundo melhor!</h1>
+    </div>
+    <div class="info-desenvolvimento">
+      <div class="info-desenvolvimento-coluna2">
+        <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+        <i class="fa fa-paw fa-5x" aria-hidden="true"></i>
+        <i class="fa fa-university fa-5x" aria-hidden="true"></i>
+>>>>>>> bbe37765ac7fc23a9673e8c233cb2abf0dbc7842
 
             </div>
             <p id="titulo-meio">A sua ajuda faz toda diferença na vida das pessoas</p>
