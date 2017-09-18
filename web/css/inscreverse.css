@@ -31,21 +31,21 @@ html, body{
     float: left;
 }
 
-#cadastro_nome{
+.cadastro_nome{
     font-family: "Arial";
     width: 220px;
     height: 30px;
     font-size: 18px;
 }
 
-#cadastro_email{
+.cadastro_email{
     font-family: "Arial";
     width: 220px;
     height: 30px;
     font-size: 18px;
 }
 
-#cadastro_senha{
+.cadastro_senha{
     font-family: "Arial";
     width: 220px;
     height: 30px;
@@ -53,7 +53,7 @@ html, body{
 }
 
 
-#botao_entrar{
+.botao_entrar{
     font-family: "Arial";
     width: 220px;
     height: 30px;
@@ -67,7 +67,7 @@ html, body{
     float: left;
 }
 
-#codicao_termos{
+.codicao_termos{
     font-family: "Arial";
     font-size: 12px;
 
