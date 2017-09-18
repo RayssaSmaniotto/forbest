@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body><%--
 <% String user = request.getParameter("id");
     UsuarioModel usuarioModel = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id")));
-%>
+%> --%>
 <div class="pai-de-todos">
     <div class="menu-superior">
         <div class="logo">
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-
+<%--
     <form method="post" action="usuario_acao_cadastrar.jsp">
         <div class="campos">
             <div>
@@ -73,7 +73,7 @@
                 <label><%= usuarioModel.getGenero() %></label>
             </div>
         </div>
-    </form>
+    </form>--%>
 </div>
 
 </body>
