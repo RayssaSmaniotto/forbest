@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body><%--
-<% String user = request.getParameter("id");
-    UsuarioModel usuarioModel = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id")));
-%> --%>
+<body>
+<% UsuarioModel usuarioModel = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id"))); %>
 <div class="pai-de-todos">
     <div class="menu-superior">
         <div class="logo">
@@ -27,53 +25,67 @@
             </div>
         </div>
     </div>
-<%--
+
     <form method="post" action="usuario_acao_cadastrar.jsp">
         <div class="campos">
             <div>
-                <label><%= usuarioModel.getNome() %></label>
+                <label><%= usuarioModel.getNome() %>
+                </label>
             </div>
             <div>
-               <label><%= usuarioModel.getSobrenome() %></label>
+                <label><%= usuarioModel.getSobrenome() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getIdade() %></label>
+                <label><%= usuarioModel.getIdade() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getDataNascimento() %></label>
+                <label><%= usuarioModel.getDataNascimento() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getEmail() %></label>
+                <label><%= usuarioModel.getEmail() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getCpf() %></label>
+                <label><%= usuarioModel.getCpf() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getCpf() %></label>
+                <label><%= usuarioModel.getCpf() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getLogradouro() %></label>
+                <label><%= usuarioModel.getLogradouro() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getNumeroLocal() %></label>
+                <label><%= usuarioModel.getNumeroLocal() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getEstado() %></label>
+                <label><%= usuarioModel.getEstado() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getCidade() %></label>
+                <label><%= usuarioModel.getCidade() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getBairro() %></label>
+                <label><%= usuarioModel.getBairro() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getCelular() %></label>
+                <label><%= usuarioModel.getCelular() %>
+                </label>
             </div>
             <div>
-                <label><%= usuarioModel.getGenero() %></label>
+                <label><%= usuarioModel.getGenero() %>
+                </label>
             </div>
         </div>
-    </form>--%>
+    </form>
 </div>
 
 </body>
