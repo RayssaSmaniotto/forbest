@@ -12,7 +12,7 @@
 <head>
   <title>4Best</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
