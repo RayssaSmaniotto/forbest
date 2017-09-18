@@ -10,13 +10,13 @@
 </head>
 
 <body>
-<% String user = request.getParameter("id");
+<%--<% String user = request.getParameter("id");
     UsuarioModel usuarioModel = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id")));
-%>
+%>--%>
 <div class="pai-de-todos">
     <div class="menu-superior">
         <div class="logo">
-            <img id="logo" src="imagens/Logo-For-Best-60x72.png">
+            <img id="logo" src="assets/image/Logo-For-Best-400x229.png">
         </div>
         <div class="campo">
             <input class="procura" type="text" placeholder="Procurar Amigos">
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-
+<%--
     <form method="post" action="usuario_acao_cadastrar.jsp">
         <div class="campos">
             <div>
@@ -75,7 +75,7 @@
             </div>
         </div>
     </form>
-</div>
+</div>--%>
 
 </body>
 

@@ -14,10 +14,10 @@
   <div class="menu-superior">
 
     <div class="menu-superior-itens">
-      <a class="idioma-texto" href="sobre.html">sobre</a>
-      <a class="idioma-texto2" href="contato.html">contato</a>
-      <a class="botao-amarelo-preto" href="entrar.html">Entrar</a>
-      <a class="botao-amarelo-preto" href="inscreverse.html">Inscreva-se</a>
+      <a class="idioma-texto" href="sobre.jsp">sobre</a>
+      <a class="idioma-texto2" href="contato.jsp">contato</a>
+      <a class="botao-amarelo-preto" href="entrar.jsp">Entrar</a>
+      <a class="botao-amarelo-preto" href="inscreverse.jsp">Inscreva-se</a>
     </div>
     <div class="menu-superior-logo">
       <img src="assets/image/Logo-For-Best-400x229.png">

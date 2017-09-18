@@ -1,0 +1,1 @@
+INSERT INTO usuarios (email,senha) VALUE (antonio,123);
