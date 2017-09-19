@@ -18,6 +18,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Bem Vindo <%= usuarioModel.getNome() %></h1>
+<h1>Bem Vindo <%= usuarioModel.getNome()%></h1>
 </body>
 </html>
