@@ -132,7 +132,7 @@ public class DoacaoDAO {
         return -1;
     }
 
-    static ArrayList<DoacaoModel> buscarDoacaoPorIdDoPost(int codigo) {
+    public static ArrayList<DoacaoModel> buscarDoacaoPorIdDoPost(int codigo) {
         ArrayList<DoacaoModel> doacoes = new ArrayList<>();
         String sql = "SELECT codigo, codigo_post, valor, url_forma_pagamento FROM doacoes WHERE codigo_post = ?";
         try {
