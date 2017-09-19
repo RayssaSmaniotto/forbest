@@ -25,7 +25,6 @@ public class DoacaoModel {
         this.codigo = codigo;
     }
 
-
     public float getValor() {
         return valor;
     }

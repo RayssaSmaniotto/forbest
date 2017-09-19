@@ -139,8 +139,4 @@ public class PostDAO {
         String sql = "COUNT(id) FROM post SET apoios = ? WHERE id = ?";
         return 0;
     }
-
-    public static void darLike(int codigo){
-
-    }
 }

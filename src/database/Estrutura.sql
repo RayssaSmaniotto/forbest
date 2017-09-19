@@ -116,4 +116,4 @@ CREATE TABLE prestacao_contas(
     texto TEXT,
     
 	FOREIGN KEY (codigo_post) REFERENCES posts(codigo)
-);   
+);
