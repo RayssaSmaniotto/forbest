@@ -1,4 +1,3 @@
-
 <%@ page import="model.UsuarioModel" %>
 <%@ page import="dao.UsuarioDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -32,61 +31,58 @@
     <form method="post" action="usuario_acao_cadastrar.jsp">
         <div class="campos">
             <div>
-                <label><%= usuarioModel.getNome() %>
+                <label>Nome: <%= usuarioModel.getNome() %>
                 </label>
             </div>
             <div>
-                <label><%= usuarioModel.getSobrenome() %>
+                <label>Sobrenome: <%= usuarioModel.getSobrenome() %>
                 </label>
             </div>
             <div>
-                <label><%= usuarioModel.getIdade() %>
+                <label>Idade: </label>
+                <input type="text" name="usuario-idade" id="usuario-idade" required="required">
+            </div>
+            <div>
+                <label>Data de Nascimento: </label>
+                <input type="text" name="usuario-data-nascimento" id="usuario-data-nascimento" required="required">
+            </div>
+            <div>
+                <label>Email: <%= usuarioModel.getEmail() %>
                 </label>
             </div>
             <div>
-                <label><%= usuarioModel.getDataNascimento() %>
-                </label>
+                <label>Cpf: </label>
+                <input type="text" name="usuario-cpf" id="usuario-cpf" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getEmail() %>
-                </label>
+                <label>Logradouro: </label>
+                <input type="text" name="usuario-logradouro" id="usuario-logradouro" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getCpf() %>
-                </label>
+                <label>Número Local</label>
+                <input type="text" name="usuario-numero-local" id="usuario-numero-local" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getCpf() %>
-                </label>
+                <label>Estado: </label>
+                <input type="text" name="usuario-estado" id="usuario-estado" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getLogradouro() %>
-                </label>
+                <label>Cidade: </label>
+                <input type="text" name="usuario-cidade" id="usuario-cidade" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getNumeroLocal() %>
-                </label>
+                <label>Bairro: </label>
+                <input type="text" name="usuario-bairro" id="usuario-bairro" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getEstado() %>
-                </label>
+                <label>Celular: </label>
+                <input type="text" name="usuario-celular" id="usuario-celular" required="required">
             </div>
             <div>
-                <label><%= usuarioModel.getCidade() %>
-                </label>
+                <label>Gênero: </label>
+                <input type="text" name="usuario-genero" id="usuario-genero" required="required">
             </div>
-            <div>
-                <label><%= usuarioModel.getBairro() %>
-                </label>
-            </div>
-            <div>
-                <label><%= usuarioModel.getCelular() %>
-                </label>
-            </div>
-            <div>
-                <label><%= usuarioModel.getGenero() %>
-                </label>
-            </div>
+            <input class="cadastrar-botao" type="submit" value="Salvar">
         </div>
     </form>
 </div>

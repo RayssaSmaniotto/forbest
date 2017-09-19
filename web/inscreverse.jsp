@@ -11,7 +11,7 @@
         <p id="titulo">Participe do 4Best. Inscreva-se!</p>
         <div class="cadastro-empresa">
             <label>Instituição</label>
-            <form action="empresa_acao_cadastrar.jsp" method="get">
+            <form action="empresa_acao_cadastrar.jsp" method="post">
                 <div>
                     <input class="cadastro-nome" type="text" name="usuario-nome" placeholder="Nome da Empresa">
                 </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="cadastro-pessoa">
             <label>Usuário</label>
-            <form action="" method="get">
+            <form action="usuario_acao_cadastrar.jsp" method="post">
                 <div>
                     <input class="cadastro-nome" type="text" name="usuario-nome" placeholder="Nome Completo">
                 </div>

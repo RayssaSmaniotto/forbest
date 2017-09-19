@@ -8,7 +8,7 @@
 
 <body>
 
-<form method="post" action="usuario_acao_cadastrar.jsp">
+<form method="post" action="perfil.jsp">
     <div class="campos">
         <div>
             <label for="usuario-nome">Nome</label>
