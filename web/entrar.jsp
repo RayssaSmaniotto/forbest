@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>4Best</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="inscreverse.css">
 </head>
 <body>
