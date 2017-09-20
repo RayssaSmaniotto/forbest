@@ -1,8 +1,5 @@
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="database.Conexao" %>
 <%@ page import="model.PostModel" %>
-<%@ page import="java.sql.PreparedStatement" %>
-%><%--
+<%--
   Created by IntelliJ IDEA.
   User: Henrique Gioppo
   Date: 20/09/2017
