@@ -8,7 +8,7 @@
 
 <body>
 
-<form method="post" action="perfil.jsp">
+<form method="post" action="usuario_acao_cadastrar.jsp">
     <div class="campos">
         <div>
             <label for="usuario-nome">Nome</label>
@@ -28,7 +28,7 @@
         </div>
         <div>
             <label for="usuario-email">E-mail</label>
-            <input type="text" name="usuario-email" id="usuario-email" required="required">
+            <input type="email" name="usuario-email" id="usuario-email" required="required">
         </div>
 
         <div>

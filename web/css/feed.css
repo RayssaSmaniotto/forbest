@@ -1,0 +1,251 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ebee;
+}
+
+.menu-superior{
+    background-image: url("4bestbackground-top.jpg");
+    height: 62px;
+    margin: 0px;
+    width: 100%;
+    box-shadow: 0px 2px 5px #888888;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.lupa{
+    text-decoration: none;
+    color: black;
+    margin-left: -30px;
+    position: relative;
+}
+.campo{
+    padding-top: 15px;
+    margin-left: 530px;
+
+}
+
+.procura{
+    border: none;
+    border-radius: 15px;
+    padding-right: 100px;
+    padding-left: 15px;
+    height: 30px;
+    position: relative;
+
+}
+
+.procura:hover{
+    border: none;
+}
+
+.procura:active{
+    border: none;
+    outline-offset: 0px;
+}
+.logo{
+    margin-top: 9px;
+    margin-left: 100px;
+    float: left;
+    color: white;
+
+}
+
+#logo{
+    height: 45px;
+    width: 38px;
+
+}
+
+.icons{
+    float: right;
+    font-size: 23px;
+    margin-top: 3px;
+    margin-right: 100px;
+    color: white;
+    width: 120px;
+    word-spacing: 15px;
+}
+
+.icones-topright{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.conteudo{
+    float: left;
+}
+
+
+.pai-de-todos{
+    height: 100%
+}
+
+.posts-criar{
+    margin-left: 410px;
+    margin-top: 70px;
+    margin-right: 400px;
+    width: 500px;
+    height: 155px;
+    background: beige;
+    
+
+  
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #888888;
+    border: 1px solid #e1e2e3;
+}
+
+.imagem-usuario{
+    float:right;
+    margin-right: 0px;
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #dedfe2;
+    overflow: hidden;
+}
+
+.perfil{
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.post-titulo-criar{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 170px;
+}
+
+
+.descricao-post-div{
+    width: 373px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.post-descricao-criar{
+    padding-left: 30px;
+    padding-right: 170px;
+    padding-bottom: 50px;
+        
+}
+
+.coluna-criar-post{
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+
+/* ------------------- 
+CSS dos Posts no FEED */
+
+.tabela-posts-feed{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+    width: 1150px;
+    height: 100%;
+}
+
+.post-usuario{
+    width: 500px;
+    height:170px;
+    margin-left: 25px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #888888;
+    border: 1px solid #e1e2e3;
+    float:left;
+}
+
+.usuario-nome{
+    color: black;
+    margin-left: 15px;
+    margin-top: 130px;
+    font-family: "Arial";
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.imagem-nome-usuario{
+    float: right;
+    width: 130px;
+    height: 100%;
+}
+
+.imagem-usuario{
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.assunto-post-tabela{
+    color: black;
+    margin-left: 20px;
+    height: 25px;
+    border-bottom: 1px solid #888888;
+    width: 350px;
+}
+
+.texto-post-tabela{
+    color: black;
+    margin-left: 20px; 
+    height: 80px;
+}
+
+.icones-post-tabela{
+    margin-left: 20px;
+}
+
+.icones-post-apoiar{
+    color: #888888;
+}
+
+.icones-post-doar{
+    color: #888888;
+    margin-left: 5px;
+}
+
+.apoiar{
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+.assunto-e-texto{
+    font-family: "Verdana";
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,8 +3,13 @@
 <html>
 <head>
     <title>4Best</title>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inscreverse.css">
+=======
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/entrar.css">
+>>>>>>> 0c8779a524e10d0ca4c5602f4a6384223db68b60
 </head>
 <body>
 <div class="entrar">
