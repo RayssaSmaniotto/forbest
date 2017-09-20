@@ -4,32 +4,31 @@
 <<<<<<< HEAD
     <link rel="stylesheet" href="css/feed.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-=======
+
     <title>Feed</title>
     <link  rel="stylesheet" href="css/perfil.css">
->>>>>>> 0c8779a524e10d0ca4c5602f4a6384223db68b60
+
 </head>
 
 <body>
-<<<<<<< HEAD
+
 
 <div class="pai-de-todos">
     <div class="menu-superior">
         <div class="logo">
             <a class="color-logo" href="index.html"><img id="logo" src="assets/image/Logo-For-Best-60x72.png"></a>
-=======
+
 <form>
 <div class="pai-de-todos">
     <div class="menu-superior">
         <div class="logo">
             <img id="logo" src="assets/image/Logo-For-Best-60x72.png">
->>>>>>> 0c8779a524e10d0ca4c5602f4a6384223db68b60
+
         </div>
         <div class="campo">
             <input class="procura" type="text" placeholder="Procurar Amigos">
             <a class="lupa" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            <div class="icons">
-<<<<<<< HEAD
+
                 <a class="icones-topright" href="amigos.html"><i class="fa fa-users" aria-hidden="true" ></i></a>
                 <a class="icones-topright" href="notificacoes.html"><i class="fa fa-bell" aria-hidden="true"></i></a>
                 <a class="icones-topright" href="configuracoes.html"><i class="fa fa-cog" aria-hidden="true"></i></a>
