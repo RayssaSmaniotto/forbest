@@ -135,8 +135,25 @@ public class PostDAO {
         return post;
     }
 
-    public static int retornarQuantidadeLikes(int codigo){
-        String sql = "COUNT(id) FROM post SET apoios = ? WHERE id = ?";
-        return 0;
+    public static PostModel retornarQuantidadeLikes(int codigo) {
+        PostModel post = null;
+        String sql = "select COUNT(apoios) as likes FROM post  WHERE id = ?";
+
+        try {
+            PreparedStatement ps = Conexao.conectar().prepareCall(sql);
+            ps.setInt(1, codigo);
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            while (resultSet.next()) {
+                post = new PostModel();
+                post.setCodigo(codigo);
+                post.setApoios(resultSet.getInt("apoios"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.desconectar();
+        }
+        return post;
     }
 }
