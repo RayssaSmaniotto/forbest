@@ -23,7 +23,7 @@
         <div class="entrar-campo">
             <form action="usuario_acao_login.jsp" method="POST">
 
-                <h1 class="titulo">Entre em 4Best</h1>
+                <h1 class="titulo">Entrar no 4Best</h1>
 
                 <div class="input-usuario" >
                     <input type="text" name="usuario-nome" placeholder="Usuario">
