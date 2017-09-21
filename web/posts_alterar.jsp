@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form method="post" action="post_acao_alterar.jsp">
+<form method="post" action="post-acao-alterar.jsp">
     <% PostModel post = PostDAO.buscarPostPorId(Integer.parseInt(request.getParameter("id"))); %>
 
     <div class="titulo">

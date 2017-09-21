@@ -27,7 +27,12 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <div class="campos-margin-top">
+=======
+
+    <form method="post" action="usuario-acao-cadastrar.jsp">
+>>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
         <div class="campos">
             <div class="biografia">
                 <label id="bio-usuario">Bio</label>

@@ -15,7 +15,12 @@
 //  post.setUsuario(UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("codigo_usuario"))));
     post.setDescricao(request.getParameter("post-descricao"));
     post.setTitulo(request.getParameter("post-assunto"));
+<<<<<<< HEAD
 //  post.setDataEvento(Date.valueOf(request.getParameter("data-evento")));
+=======
+//  post.setDataEvento(Date.valueOf(request.getParameter("data_evento")));
+
+>>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
 
     int id = PostDAO.inserir(post);
     if (id != -1) {
