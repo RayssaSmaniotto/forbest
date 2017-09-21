@@ -9,23 +9,24 @@
 <html>
 <head>
     <title>PrestacaoContas</title>
-    <link rel="stylesheet" href="prestacao_contas.css">
+    <link rel="stylesheet" href="css/prestacao_contas.css">
 </head>
 
 <body>
     <div class = "dados">
+        <div class = "segundo_fundo">
+            <form action="calculo_prestacao_contas.jsp" method="POST">
+                <div class="titulo">Quantidade em reais recebida no ultimo mês </div>
 
-        <form action="calculo_prestacao_contas.jsp" method="POST">
-            <h1 class="titulo">Quantidade em reais recebida no ultimo mês </h1>
+                <div class="input-quantidade">
+                    <input type="number" name="input-quantidade" placeholder="R$">
+                </div>
 
-            <div class="input-quantidade">
-                <input type="number" name="input-quantidade" placeholder="R$">
-            </div>
-
-            <div class="botao-enviar">
-                <input type="button" onclick="alert('Obrigado')" value="Enviar">
-            </div>
-        </form>
+                <div class="botao-enviar">
+                    <input type="button" onclick="alert('Obrigado')" value="Enviar">
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="menu-superior">

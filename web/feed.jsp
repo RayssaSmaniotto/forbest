@@ -74,7 +74,7 @@
                         <p class="assunto-e-texto"> Assunto aqui!</p>
                     </div>
                     <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
+                        <p0 class="assunto-e-texto"> Texto aqui!</p0>
                     </div>
                     <div class="icones-post-tabela">
                         <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
