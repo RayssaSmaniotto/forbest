@@ -25,7 +25,6 @@
     if(informado != total) {
         usuario.setSenha("snAndromedaCapivara");
         response.sendRedirect("index.jsp");
-        //tem que por o endereço da pagina.
         //o usuario vai ter a senha alterada para saAndromedaCapivara e ela vai ser atualizada não permitindo o acesso deste.
     }
 
