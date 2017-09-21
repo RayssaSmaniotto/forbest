@@ -13,9 +13,9 @@
     PostModel post = new PostModel();
     post.setUsuario(UsuarioDAO.buscarUsuarioPorId(1));
 //  post.setUsuario(UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("codigo_usuario"))));
-    post.setDescricao(request.getParameter("descricao"));
-    post.setTitulo(request.getParameter("titulo"));
-   // post.setDataEvento(Date.valueOf(request.getParameter("data_evento")));
+    post.setDescricao(request.getParameter("post-descricao"));
+    post.setTitulo(request.getParameter("post-assunto"));
+//  post.setDataEvento(Date.valueOf(request.getParameter("data-evento")));
 
     int id = PostDAO.inserir(post);
     if (id != -1) {

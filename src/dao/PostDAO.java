@@ -81,8 +81,7 @@ public class PostDAO {
 
     public static List<PostModel> retornarPosts() {
         List<PostModel> posts = new ArrayList<>();
-        String sql = "SELECT codigo, descricao,titulo, data_evento, codigo_usuario, "
-                + "apoios FROM posts";
+        String sql = "SELECT codigo, descricao,titulo, data_evento, codigo_usuario, status, apoios FROM posts";
         try {
             Statement statement = Conexao.conectar().createStatement();
             statement.execute(sql);
@@ -95,9 +94,9 @@ public class PostDAO {
                 post.setDataEvento(resultSet.getDate("data_evento"));
                 post.setUsuario(UsuarioDAO.buscarUsuarioPorId(resultSet.getInt("codigo_usuario")));
                 post.setApoios(resultSet.getInt("apoios"));
-                DoacaoModel doacao = DoacaoDAO.buscarDoacaoPorId(resultSet.getInt("doacao"));
                 post.setDoacoes(DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()));
                 post.setStatus(resultSet.getString("status"));
+                posts.add(post);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -3,13 +3,24 @@
 <html>
 <head>
     <title>4Best</title>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <link rel="stylesheet" href="inscreverse.css">
     <link rel="stylesheet" href="css/entrar.css">
+=======
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inscreverse.css">
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/entrar.css">
+
+>>>>>>> 8109a8f42e7a938428cbcd90949f89c9ae6ef61c
 </head>
 <body>
 <div class="entrar">
     <div class="entrar-box">
+
 
         <div class="entrar-campo">
             <form action="usuario_acao_login.jsp" method="POST">
@@ -32,5 +43,12 @@
         </div>
     </div>
 </div>
+<div class="menu-superior">
+    <div class="logo">
+        <img id="logo" src="assets/image/Logo-For-Best-60x72.png">
+
+    </div>
+</div>
+
 </body>
 </html>

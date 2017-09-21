@@ -1,3 +1,9 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.PostModel" %>
+
+<%@ page import="dao.PostDAO" %>
+<%@ page import="model.UsuarioModel" %>
+<%@ page import="dao.UsuarioDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
@@ -9,17 +15,22 @@
 
 <body>
 
+<% UsuarioModel usuarioModel = (UsuarioModel) session.getAttribute("usuario"); %>
+
+
 <div class="pai-de-todos">
     <div class="menu-superior">
         <div class="logo">
             <img id="logo" src="assets/image/Logo-For-Best-60x72.png">
+
         </div>
         <div class="campo">
             <input class="procura" type="text" placeholder="Procurar Amigos">
             <a class="lupa" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
             <div class="icons">
 
-                <a class="icones-topright" href="amigos.html"><i class="fa fa-users" aria-hidden="true"></i></a>
+                <a class="icones-topright" href="perfil.jsp?id=?"><i class="fa fa-users"
+                                                                 aria-hidden="true"></i></a>
                 <a class="icones-topright" href="notificacoes.html"><i class="fa fa-bell"
                                                                        aria-hidden="true"></i></a>
                 <a class="icones-topright" href="configuracoes.html"><i class="fa fa-cog"
@@ -31,16 +42,18 @@
 
         <div class="posts-criar">
             <div class="criar-post">
-
+                <% if(session.getAttribute("usuario") != null){%>
                 <div class="imagem-usuario">
-                    <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                  src="assets/image/usuario-ruan.jpg"></a>
-
+                    <a class="fotoperfil" href="perfil.jsp?id=<%=usuarioModel.getCodigo()%>"><img class="perfil"
+                                                                 src="assets/image/usuario-ruan.jpg">
+                    </a>
                 </div>
+                <%}%>
                 <form action="post_acao_postar.jsp" method="POST">
 
                     <div>
-                        <input class="post-titulo-criar" type="text" name="post-assunto" placeholder="Assunto">
+                        <input class="post-titulo-criar" type="text" name="post-assunto"
+                               placeholder="Assunto">
                     </div>
 
                     <div class="descricao-post-div">
@@ -50,7 +63,8 @@
                     <div class="coluna-criar-post">
                         <input class="post-criar" type="submit" value="Publicar" name="criar-post">
 
-                        <a class="icones-imagem" href="#"><label class="foto-video">Foto/Vídeo </label><i
+                        <a class="icones-imagem" href="#"><label
+                                class="foto-video">Foto/Vídeo </label><i
                                 class="fa fa-picture-o" aria-hidden="true"></i></a>
                     </div>
                 </form>
@@ -58,14 +72,19 @@
             </div>
         </div>
         <div class="tabela-posts-feed">
+
+            <% ArrayList<PostModel> posts = (ArrayList<PostModel>) PostDAO.retornarPosts(); %>
+            <% for (PostModel post : posts) { %>
             <div class="post-usuario">
 
                 <div class="conteudo">
                     <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
+                        <p class="assunto-e-texto"><%=post.getTitulo()%>
+                        </p>
                     </div>
                     <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
+                        <p class="assunto-e-texto"><%=post.getDescricao()%>
+                        </p>
                     </div>
                     <div class="icones-post-tabela">
                         <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
@@ -79,102 +98,15 @@
                 </div>
                 <div class="imagem-nome-usuario">
                     <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
+                        <a class="fotoperfil" href="perfil.jsp"><img id="perfil" src="usuario-ruan.jpg"></a>
                     </div>
                     <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
+                        <a class="usuario-nome" href="perfil.jsp?id=3<%= post.getUsuario().getCodigo()%>"> <%= post.getUsuario().getNome()%></a>
                     </div>
                 </div>
             </div>
-            <div class="post-usuario">
+            <% } %>
 
-                <div class="conteudo">
-                    <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
-                    </div>
-                    <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
-                    </div>
-                    <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-                        <label class="apoiar"><a class="icones-post-doar" href="#"><i
-                                class="fa fa-credit-card-alt fa-lg" aria-hidden="true">Doar</i></a> </label>
-                    </div>
-                </div>
-                <div class="imagem-nome-usuario">
-                    <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
-                    </div>
-                    <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
-                    </div>
-                </div>
-            </div>
-            <div class="post-usuario">
-
-                <div class="conteudo">
-                    <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
-                    </div>
-                    <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
-                    </div>
-                    <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg"
-                                                                aria-hidden="true"><label
-                                class="apoiar">Doar</label></i></a>
-                    </div>
-                </div>
-                <div class="imagem-nome-usuario">
-                    <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
-                    </div>
-                    <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post-usuario">
-
-                <div class="conteudo">
-                    <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
-                    </div>
-                    <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
-                    </div>
-                    <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg"
-                                                                aria-hidden="true"><label
-                                class="apoiar">Doar</label></i></a>
-                    </div>
-                </div>
-                <div class="imagem-nome-usuario">
-                    <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
-                    </div>
-                    <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </div>

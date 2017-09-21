@@ -1,11 +1,9 @@
 <%@ page import="model.PostModel" %>
 <%@ page import="dao.PostDAO" %>
-<%@ page import="model.DoacaoModel" %>
 <%@ page import="dao.DoacaoDAO" %>
 <%@ page import="dao.UsuarioDAO" %>
 <%@ page import="model.UsuarioModel" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.Array" %><%--
+<%@ page import="model.DoacaoModel" %><%--
   Created by IntelliJ IDEA.
   User: Henrique Gioppo Roman Ross
   Date: 19/09/2017
@@ -21,12 +19,14 @@
     UsuarioModel usuario = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id")));
     PostModel post = PostDAO.buscarPostPorId(Integer.parseInt(request.getParameter("id")));
 
-    total += DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()).get(1).getValor();
-
+    for (DoacaoModel doacao : post.getDoacoes()) {
+        total += DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()).get(1).getValor();
+    }
     if(informado != total) {
         usuario.setSenha("snAndromedaCapivara");
-        response.setHeader("Refresh", "endereço da pagina");
+        response.sendRedirect("index.jsp");
         //tem que por o endereço da pagina.
+        //o usuario vai ter a senha alterada para saAndromedaCapivara e ela vai ser atualizada não permitindo o acesso deste.
     }
 
 %>
