@@ -14,13 +14,12 @@
 <%
     double total = 0;
     double informado = 0;
-    int contador = 0;
 
     UsuarioModel usuario = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id")));
     PostModel post = PostDAO.buscarPostPorId(Integer.parseInt(request.getParameter("id")));
 
     for (DoacaoModel doacao : post.getDoacoes()) {
-        total += DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()).get(1).getValor();
+        total += DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()).get(Integer.parseInt("?")).getValor();
     }
     if(informado != total) {
         usuario.setSenha("snAndromedaCapivara");
