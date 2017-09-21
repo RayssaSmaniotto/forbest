@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<form method="post" action="post_acao_postar.jsp">
+<form method="post" action="post-acao-postar.jsp">
 
     <div class="titulo">
         <label for="post-titulo">Titulo</label>

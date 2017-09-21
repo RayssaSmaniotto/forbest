@@ -3,12 +3,12 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/dado_usuarios.css">
+    <link rel="stylesheet" href="css/dado-usuarios.css">
 </head>
 
 <body>
 
-<form method="post" action="usuario_acao_cadastrar.jsp">
+<form method="post" action="usuario-acao-cadastrar.jsp">
     <div class="campos">
         <div>
             <label for="usuario-nome">Nome</label>

@@ -3,6 +3,10 @@
 <html>
 <head>
     <title>4Best</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inscreverse.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/entrar.css">
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="inscreverse.css">
@@ -22,15 +26,15 @@
                 <h1 class="titulo">Entrar no 4Best</h1>
 
                 <div class="input-usuario" >
-                    <input type="text" name="usuario_nome" placeholder="Usuario">
+                    <input type="text" name="usuario-nome" placeholder="Usuario">
                 </div>
                 <div>
-                    <input  class="input-senha"  type="password" name="usuario_senha" placeholder="Senha">
+                    <input  class="input-senha"  type="password" name="usuario-senha" placeholder="Senha">
                 </div>
                 <div>
                     <input class="botao-entrar" type="submit" value="Entrar" >
                 </div>
-                <p class="text-inscrever">Não tem uma conta? <a class="inscrever" href="dados_usuario.jsp">Inscreva-se »</a></p>
+                <p class="text-inscrever">Não tem uma conta? <a class="inscrever" href="dados-usuario.jsp">Inscreva-se »</a></p>
 
             </form>
         </div>
