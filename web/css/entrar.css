@@ -1,5 +1,6 @@
 body{
     background-image: url("4bestbackground.jpg");
+    background-size: 100% 100%;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -21,26 +22,24 @@ body{
 
 }
 .botao-entrar{
-
-    font-size: 20px;
+    border-radius: 40px;
+    font-size: 25px;
     margin-top: 20px;
-    padding-left: 127px;
-    padding-right: 127px;
+    padding-left: 120px;
+    padding-right: 120px;
     border-style: solid;
-    border-color: #1da1f2;
-    background-color: #1da1f2;
+    border-color: #e6ca2b;
+    background-color: #e6ca2b;
     transition: all 0.6s;
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: Arial black;
-    color: white;
-
-
+    color: #282727;
 }
 .botao-entrar:hover{
-    background: #006dbf;
+    background: #9b861a;
     color: white;
-    border-color: #006dbf;
+    border-color: #9b861a;
 }
 .input-senha,input{
     margin-top: 20px;
@@ -48,11 +47,10 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 25px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: solid;
-    border-color:gray;
+    border-color:#bfc0c1;
     border-width:  2px;
-
 }
 
 .titulo{
@@ -62,12 +60,13 @@ body{
 }
 .entrar-campo{
     background-color:  white;
-    border-radius: 10px;
-
-    height:400px;
+    border-radius: 20px;
+    padding-top: 20px;
+    height:380px;
     width: 380px;
     padding-left: 60px;
-    box-shadow: 3px 3px 5px #888888;
+    box-shadow: 0px 0px 20px #222223;
+    border: 1px solid #e1e2e3;
 
 
 }

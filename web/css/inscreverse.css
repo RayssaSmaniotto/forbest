@@ -1,4 +1,7 @@
 html, body{
+    background-image: url("4bestbackground.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -7,68 +10,143 @@ html, body{
 
 #titulo{
     text-align: center;
-    font-family: "Arial";
+    font-family: "Arial Black";
 }
 
 .inscreverse-box{
-    width: 550px;
-    height:300px;
-    margin-top: 100px;
-    margin-left: 15%;
-    background-color:antiquewhite;
-
+    width: 750px;
+    height:550px;
+    margin: 0 auto;
+    margin-top: -70px;
+    background-color:white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #222223;
+    border: 1px solid #e1e2e3;
+    padding-top: 10px;
+    text-align: center;
 }
 
 .cadastro-empresa{
     text-align: center;
-    width: 250px;
+    width: 360px;
+    height: 380px;
     float: right;
+}
+
+.intituicao{
+    margin-bottom: 10px;
+    font-family: "Arial Black";
 }
 
 .cadastro-pessoa{
     text-align: center;
-    width: 250px;
+    width: 360px;
+    height: 320px;
     float: left;
 }
 
-.cadastro_nome{
+.botao-entrar-impresa{
     font-family: "Arial";
-    width: 220px;
+    width: 80px;
     height: 30px;
     font-size: 18px;
-}
-
-.cadastro_email{
-    font-family: "Arial";
-    width: 220px;
-    height: 30px;
-    font-size: 18px;
-}
-
-.cadastro_senha{
-    font-family: "Arial";
-    width: 220px;
-    height: 30px;
-    font-size: 18px;
-}
-
-
-.botao_entrar{
-    font-family: "Arial";
-    width: 220px;
-    height: 30px;
-    font-size: 18px;
+    margin-left: 18px;
 }
 
 .div-codicao-termos{
-    margin-top: 0px;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 75px;
     margin-right: 100px;
+    margin-bottom: 50px;
     float: left;
 }
 
 .codicao_termos{
     font-family: "Arial";
-    font-size: 12px;
+    font-size: 15px;
+}
 
+.menu-superior{
+
+    height: 60px;
+    margin: 0px;
+    width: 200px;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    border: none;
+}
+.pai{
+
+    padding-top: 200px;
+    text-align: center;
+}
+
+.botao-entrar-pessoa{
+    font-family: "Arial";
+    width: 200px;
+    font-size: 18px;
+    padding-left: 18px;
+
+}
+.botao-entrar-pes{
+    font-size: 20px;
+    margin-top: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+    border-style: solid;
+    border-color: #e6ca2b;
+    border-radius: 40px;
+    background-color: #e6ca2b;
+    transition: all 0.6s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Arial black;
+    font-size: 25px;
+    color: #282727;
+}
+
+.botao-entrar-pes:hover{
+
+    background: #9b861a;
+    color: white;
+    border-color: #9b861a;
+}
+.botao-entrar-imp{
+    margin-top: 20px;
+    padding-left: 78px;
+    padding-right: 78px;
+    border-style: solid;
+    border-color: #e6ca2b;
+    border-radius: 40px;
+    background-color: #e6ca2b;
+    transition: all 0.6s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Arial black;
+    font-size: 25px;
+    color: #282727;
+}
+.botao-entrar-imp:hover {
+    background:#9b861a;
+    color: white;
+    border-color: #9b861a;
+}
+.usuario-text{
+    font-family: "Arial Black";
+    text-align: center;
+}
+
+.cadastro-dados{
+    margin-top: 5px;
+    padding-left:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: solid;
+    border-color:#bfc0c1;
+    border-width:  2px;
 }

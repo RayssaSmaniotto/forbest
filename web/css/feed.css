@@ -6,96 +6,24 @@ html, body{
     background-color: #e9ebee;
 }
 
-.menu-superior{
-    background-image: url("4bestbackground-top.jpg");
-    height: 62px;
-    margin: 0px;
-    width: 100%;
-    box-shadow: 0px 2px 5px #888888;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-}
-.lupa{
-    text-decoration: none;
-    color: black;
-    margin-left: -30px;
-    position: relative;
-}
-.campo{
-    padding-top: 15px;
-    margin-left: 530px;
-
-}
-
-.procura{
-    border: none;
-    border-radius: 15px;
-    padding-right: 100px;
-    padding-left: 15px;
-    height: 30px;
-    position: relative;
-
-}
-
-.procura:hover{
-    border: none;
-}
-
-.procura:active{
-    border: none;
-    outline-offset: 0px;
-}
-.logo{
-    margin-top: 9px;
-    margin-left: 100px;
-    float: left;
-    color: white;
-
-}
-
-#logo{
-    height: 45px;
-    width: 38px;
-
-}
-
-.icons{
-    float: right;
-    font-size: 23px;
-    margin-top: 3px;
-    margin-right: 100px;
-    color: white;
-    width: 120px;
-    word-spacing: 15px;
-}
-
-.icones-topright{
-    text-decoration: none;
-    color: white;
-    
-}
-
 .conteudo{
     float: left;
 }
 
 
 .pai-de-todos{
-    height: 100%
+    height: 100%;
+    margin: 0 auto;
 }
 
 .posts-criar{
-    margin-left: 410px;
     margin-top: 70px;
-    margin-right: 400px;
+}
+
+.criar-post{
+    margin: 0 auto;
     width: 500px;
     height: 155px;
-    background: beige;
-    
-
-  
     background-color: #ffffff;
     box-shadow: 3px 3px 5px #888888;
     border: 1px solid #e1e2e3;
@@ -117,7 +45,7 @@ html, body{
 .perfil{
     width: 100px;
     height: 100px;
-    background: red;
+
 }
 
 .post-titulo-criar{
@@ -152,11 +80,15 @@ html, body{
 /* ------------------- 
 CSS dos Posts no FEED */
 
+.feed-geral{
+    width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+}
+
 .tabela-posts-feed{
-    margin-left: 100px;
-    margin-right: 100px;
     margin-top: 0px;
-    width: 1150px;
+    width: 100%;
     height: 100%;
 }
 
@@ -204,7 +136,7 @@ CSS dos Posts no FEED */
 
 .texto-post-tabela{
     color: black;
-    margin-left: 20px; 
+    margin-left: 20px;
     height: 80px;
 }
 
@@ -230,13 +162,25 @@ CSS dos Posts no FEED */
 .assunto-e-texto{
     font-family: "Verdana";
     font-size: 14px;
+    width: 350px;
+    height: 80px;
 }
 
+#minha-div{
+    display: none;
+}
 
+.alterar-excluir{
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin-left: 10px;
+    word-spacing: 5px;
+}
 
-
-
-
+.div-alterar-post{
+    display: none;
+}
 
 
 

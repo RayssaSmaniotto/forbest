@@ -6,81 +6,6 @@ html, body{
     background-color: #e9ebee;
 }
 
-.menu-superior{
-    background-image: url("4bestbackground-top.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 62px;
-    margin: 0px;
-    width: 100%;
-    box-shadow: 0px 2px 5px #888888;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    margin:0 auto;
-}
-
-.lupa{
-    text-decoration: none;
-    color: black;
-    margin-left: -30px;
-    position: relative;
-}
-.campo{
-    padding-top: 15px;
-    margin-left: 530px;
-
-}
-
-.procura{
-    border: none;
-    border-radius: 15px;
-    padding-right: 100px;
-    padding-left: 15px;
-    height: 30px;
-    position: relative;
-
-}
-
-.procura:hover{
-    border: none;
-}
-
-.procura:active{
-    border: none;
-    outline-offset: 0px;
-}
-.logo{
-    margin-top: 9px;
-    margin-left: 100px;
-    float: left;
-    color: white;
-
-}
-
-#logo{
-    height: 45px;
-    width: 38px;
-
-}
-
-.icons{
-    float: right;
-    font-size: 23px;
-    margin-top: 3px;
-    margin-right: 100px;
-    color: white;
-    width: 120px;
-    word-spacing: 15px;
-}
-
-.icones-topright{
-    text-decoration: none;
-    color: white;
-
-}
-
 .conteudo{
     float: left;
 }
@@ -91,14 +16,14 @@ html, body{
 }
 
 .campos-margin-top{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .campos{
     background-color: antiquewhite;
     margin: 0 auto;
     width: 700px;
-    height: 230px;
+    height: 290px;
     background-color: #ffffff;
     box-shadow: 3px 3px 5px #888888;
     border: 1px solid #e1e2e3;
@@ -106,8 +31,8 @@ html, body{
 
 .perfil-usuario-nome{
     color: black;
-    margin-left: 15px;
-    margin-top: 2px;
+    text-align:center;
+    margin-top: 5px;
     font-family: "Arial";
     text-decoration: none;
     font-weight: 600;
@@ -117,14 +42,14 @@ html, body{
 .perfil-imagem-nome-usuario{
     float: right;
     width: 180px;
-    height: 229px;
+    height: 289px;
     background-color: #ffffff;
 
     border: 1px solid #e1e2e3;
 }
 
 .perfil-imagem-usuario{
-    margin-top: 10px;
+    margin-top: 50px;
     margin-right: 5px;
     margin-left: 12px;
     height: 150px;
@@ -139,7 +64,6 @@ html, body{
 #perfil-perfil{
     width: 150px;
     height: 150px;
-    background: red;
 }
 
 .sobre{
@@ -205,7 +129,6 @@ CSS dos Posts no FEED */
 .perfil{
     width: 100px;
     height: 100px;
-    background: red;
 }
 
 .tabela-posts-feed{
@@ -292,21 +215,83 @@ CSS dos Posts no FEED */
 .assunto-e-texto{
     font-family: "Verdana";
     font-size: 14px;
+    width: 350px;
+    height: 80px;
+}
+
+#minha-div{
+    margin:0 auto;
+    margin-top:10px;
+    width: 710px;
+    height: 230px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #888888;
+    border: 1px solid #e1e2e3;
+    display: none;
+}
+
+.alterar-excluir{
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin-left: 10px;
+    word-spacing: 5px;
 }
 
 
+/*Conig Amigos tabela*/
+#div-amigos{
+    margin:0 auto;
+    margin-top:5px;
+    width: 700px;
+    height:140px;
+    display: none;
+}
 
+.amigos-usuario-nome{
+    color: black;
+    margin-top: 5px;
+    font-family: "Arial";
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
 
+.amigos-imagem-nome-usuario{
+    float: left;
+    width: 120px;
+    height: 100%;
+}
 
+.amigos-imagem-usuario{
+    margin-left: 7px;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #dedfe2;
+    overflow: hidden;
+}
 
+#amigos-fotoperfil{
+    width: 100px;
+    height: 100px;
+}
 
+.lista-icones{
+    float: left;
+    text-decoration: none;
+    color: black;
+}
 
-
-
-
-
-
-
+.lista-icones2{
+    float: left;
+    text-decoration: none;
+    margin-left: 50px;
+}
 
 
 

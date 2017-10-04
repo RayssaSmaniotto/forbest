@@ -1,0 +1,70 @@
+.conteudo{
+    margin-top: 0px;
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.div-alterar-post{
+    width: 500px;
+    height:200px;
+    margin-left: 25px;
+    margin-top: 80px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #888888;
+    border: 1px solid #e1e2e3;
+    float:left;
+}
+
+.assunto-e-texto{
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 25px;
+    width: 300px;
+
+}
+
+.texto-post-tabela{
+    color: black;
+    margin-left: 20px;
+    height: 80px;
+    width: 180px ;
+    margin-top: 20px;
+}
+
+
+.usuario-nome{
+    color: black;
+    margin-left: 12px;
+    margin-top: 110px;
+    font-family: "Arial";
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.imagem-nome-usuario{
+    float: right;
+    width: 130px;
+    height: 100%;
+
+}
+
+.imagem-usuario{
+    float:right;
+    margin-right: 10px;
+    margin-top: 0px;
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #dedfe2;
+    overflow: hidden;
+}
+
+#perfil{
+    width: 100px;
+    height: 100px;
+}

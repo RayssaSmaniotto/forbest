@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ebee;
+}
+
+.div-alterar-usuario{
+    margin:0 auto;
+    margin-top: 80px;
+    width: 650px;
+    height: 950px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px #888888;
+    border: 1px solid #e1e2e3;
+}
+
+#alterar-usuario{
+    float: left;
+    margin-top: 40px;
+    margin-left: 150px;
+    width: 400px;
+    height: 900px;
+}
+
+.texto{
+    font-size: 20px;
+    font-family: "Arial";
+    color: #222223;
+}
+
+.input{
+    width: 250px;
+    float: right;
+}
+
+.blocos{
+    width: 325px;
+    height: 40px;
+}
+
+.texto-label{
+    flaot: left;
+    width: 120px;
+}
+
+.texto-input{
+    float: right;
+    margin-top: -23px;
+    width: 200px;
+}
+
+.blocos2{
+    width: 325px;
+    height: 40px;
+    margin-top: 35px;
+    font-size: 20px;
+    font-family: "Arial";
+    color: #222223;
+}
+
+.botao-salvar{
+    margin-left: 150px;
+
+}
