@@ -3,4 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+
+        <servlet-name>kiwi</servlet-name>
+
+        <servlet-class>FileUpload</servlet-class>
+
+    </servlet>
+
+
+
+    <servlet-mapping>
+
+        <servlet-name>kiwi</servlet-name>
+
+        <url-pattern>/uploadImage</url-pattern>
+
+    </servlet-mapping>
 </web-app>
