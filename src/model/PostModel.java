@@ -2,6 +2,9 @@ package model;
 
 import java.sql.Date;
 import java.util.ArrayList;
+import database.Conexao;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 /**
  * @author Antonio Pedro 22/08/2017
@@ -16,7 +19,7 @@ public class PostModel {
         this.doacoes = doacoes;
     }
 
-    private int codigo, apoios;
+    private int codigo,apoios;
     private ArrayList<DoacaoModel> doacoes;
     private UsuarioModel usuario;
     private String descricao, titulo, status;
@@ -31,7 +34,20 @@ public class PostModel {
     }
 
     public int getApoios() {
-        return apoios;
+     /*   String sql = "SELECT COUNT(apoios) AS apoios FROM posts WHERE codigo = ?";
+
+        try {
+            PreparedStatement ps = Conexao.conectar().prepareCall(sql);
+            ps.setInt(1, this.codigo);
+            ps.execute();
+            apoios = ps.getResultSet().getInt("apoios");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.desconectar();
+        }
+        return apoios;*/
+        return codigo;
     }
 
     public void setApoios(int apoios) {

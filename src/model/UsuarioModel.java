@@ -13,7 +13,7 @@ public class UsuarioModel {
     private String bairro, senha, celular, biografia, urlFacebook, urlLinkedin, urlTwitter, urlInstagram;
     private Date dataNascimento;
     private char genero;
-    private Blob foto, galeria;
+    private Blob foto;
 
     public Blob getFoto() {
         return foto;
@@ -30,7 +30,9 @@ public class UsuarioModel {
     public void setGaleria(Blob galeria) {
         this.galeria = galeria;
     }
-    
+
+    private Blob galeria;
+
     public String getLogradouro() {
         return logradouro;
     }
@@ -196,7 +198,7 @@ public class UsuarioModel {
     }
 
     public void setUrlTwitter(String urlTwiter) {
-        this.urlTwitter = urlTwitter;
+        this.urlTwitter = urlTwiter;
     }
 
     public String getUrlInstagram() {
@@ -204,7 +206,7 @@ public class UsuarioModel {
     }
 
     public void setUrlInstagram(String urlInstagran) {
-        this.urlInstagram = urlInstagram;
+        this.urlInstagram = urlInstagran;
     }
 
     public Date getDataNascimento() {

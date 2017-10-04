@@ -7,9 +7,8 @@ import java.util.Date;
  */
 public class AmigoModel {
 
-    private int codigo;
+    private int codigo,confirmado;
     private UsuarioModel solicitante, solicitado;
-    private boolean confirmado;
     private Date dataCriacao;
 
     public int getCodigo() {
@@ -17,10 +16,11 @@ public class AmigoModel {
     }
 
     public boolean isConfirmado() {
-        return confirmado;
+        return (confirmado==2);
     }
 
-    public void setConfirmado(boolean confirmado) {
+    // 1 - Pendente, 2 - Confirmado ,3 - Recusado
+    public void setConfirmado(int confirmado) {
         this.confirmado = confirmado;
     }
 
