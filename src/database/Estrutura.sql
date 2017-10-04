@@ -23,7 +23,9 @@ CREATE TABLE usuarios(
 	celular VARCHAR(15),
 	genero CHAR(1),
 	biografia TEXT,
-	foto BLOB,
+	foto LONG_BLOB,
+/*	imagem bytea,
+	codigo_imagem VAR (20),*/
 	galeria BLOB,
 	url_facebook VARCHAR(255),
 	url_linkedin VARCHAR(255),
@@ -107,13 +109,13 @@ CREATE TABLE posts_videos(
 );
 
 CREATE TABLE prestacao_contas(
-  codigo INT(20) PRIMARY KEY AUTO_INCREMENT,
-  codigo_post INT(20),
-  gastos DOUBLE,
-  recebidos DOUBLE,
-  foto BLOB,
-  video BLOB,
-  texto TEXT,
+	codigo INT(20) PRIMARY KEY AUTO_INCREMENT,
+    codigo_post INT(20),
+    gastos DOUBLE,
+    recebidos DOUBLE,
+    foto BLOB,
+    video BLOB,
+    texto TEXT,
     
 	FOREIGN KEY (codigo_post) REFERENCES posts(codigo)
 );
