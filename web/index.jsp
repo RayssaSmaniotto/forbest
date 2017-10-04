@@ -10,21 +10,23 @@
 
 <div class="Geral">
     <div class="menu-superior">
-        <div class="menu-superior-itens">
-            <a class="idioma-texto" href="sobre.jsp">sobre</a>
-            <a class="idioma-texto2" href="contato.jsp">contato</a>
-            <a class="botao-amarelo-preto" href="entrar.jsp">Entrar</a>
-            <link rel="stylesheet" href="entrar.jsp">
-            <a class="botao-amarelo-preto" href="inscreverse.jsp">Inscreva-se</a>
-            <link rel="stylesheet" href="inscreverse.jsp">
-
-        </div>
-        <div class="menu-superior-logo">
-            <img src="assets/image/Logo-For-Best-400x229.png">
-        </div>
+        <div class="parte-superior">
+            <div class="menu-superior-itens">
+                <a class="idioma-texto" href="sobre.jsp">sobre</a>
+                <a class="idioma-texto2" href="contato.jsp">contato</a>
+                <a class="botao-amarelo-preto" href="entrar.jsp">Entrar</a>
+                <link rel="stylesheet" href="entrar.jsp">
+                <a class="botao-amarelo-preto" href="inscreverse.jsp">Inscreva-se</a>
+                <link rel="stylesheet" href="inscreverse.jsp">
+            </div>
+            <div class="menu-superior-logo">
+                <img src="assets/image/Logo-For-Best-400x229.png">
+            </div>
         <div class="frase-efeito">
             <h1>construa um mundo melhor!</h1>
         </div>
+        </div>
+
         <div class="info-desenvolvimento">
             <div class="info-desenvolvimento-coluna2">
                 <i class="fa fa-users fa-5x" aria-hidden="true"></i>

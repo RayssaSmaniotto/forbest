@@ -11,7 +11,7 @@
 
 <body>
 <% UsuarioModel usuario = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id"))); %>
-<form method="post" action="usuario-acao-cadastrar.jsp">
+<form method="post" action="usuario_acao_cadastrar.jsp">
     <div>
         <label for="usuario-nome">Nome</label>
         <input type="text" name="usuario-nome" id="usuario-nome" required="required" value="<%= usuario.getNome() %>">

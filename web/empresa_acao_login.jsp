@@ -8,8 +8,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String email = request.getParameter("usuario-nome");
-    String senha = request.getParameter("usuario-senha");
+    String email = request.getParameter("usuario_nome");
+    String senha = request.getParameter("usuario_senha");
     UsuarioModel usuario = UsuarioDAO.realizarLogin(email, senha);
     if (usuario != null){
         session.setAttribute("usuario", usuario);

@@ -9,7 +9,7 @@
     usuario.setSenha(request.getParameter("usuario-senha"));
     int id = UsuarioDAO.inserir(usuario);
     if (id != -1) {
-        response.sendRedirect("perfil-empresa.jsp?id=" + id);
+        response.sendRedirect("perfil_empresa.jsp?id=" + id);
     } else {
 
     }

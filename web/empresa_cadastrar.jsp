@@ -3,11 +3,11 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/perfil-empresa.css">
+    <link rel="stylesheet" href="css/perfil_empresa.css">
 </head>
 <body>
 
-<form method="post" action="perfil-empresa.jsp">
+<form method="post" action="perfil_empresa.jsp">
     <div class="campos">
         <div>
             <label for="usuario-nome">Nome da Empresa</label>

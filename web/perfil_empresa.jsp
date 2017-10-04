@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <form method="post" action="empresa-acao-cadastrar.jsp">
+    <form method="post" action="empresa_acao_cadastrar.jsp">
         <div class="campos">
             <div>
                 <label><%=usuarioModel.getNome()%></label>

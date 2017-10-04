@@ -15,9 +15,9 @@
             UsuarioDAO.excluir(id);
             UsuarioModel usuario = buscarUsuarioPorId(id);
             if (usuario == null) {
-                response.sendRedirect("usuario-lista.jsp?message=OK");
+                response.sendRedirect("usuario_lista.jsp?message=OK");
             } else {
-                response.sendRedirect("usuario-lista.jsp?message=INCORRETO");
+                response.sendRedirect("usuario_lista.jsp?message=INCORRETO");
             }
         }
     }catch (NumberFormatException e){

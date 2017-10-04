@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="model.PostModel" %>
 
@@ -11,139 +10,64 @@
 <head>
     <title>Feed</title>
     <link rel="stylesheet" href="css/feed.css">
+    <link rel="stylesheet" href="css/menu_superior.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-=======
-<%@ page import="model.UsuarioModel" %>
-<html>
-
-<head>
-    <link rel="stylesheet" href="css/feed.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-    <title>Feed</title>
-    <link rel="stylesheet" href="css/perfil.css">
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
-</head>
-
-
-<<<<<<< HEAD
-<% UsuarioModel usuarioModel = (UsuarioModel) session.getAttribute("usuario"); %>
-
-
-=======
-<%UsuarioModel usuarioModel = new UsuarioModel();%>
-
-<title>Feed</title>
-<link rel="stylesheet" href="css/perfil.css">
-
 </head>
 
 <body>
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
+
+
+<script>
+    function Mudarestadopost(e1) {
+        var display = document.getElementById(el).style.display;
+        console.log(display);
+        if (display == "block")
+            document.getElementById(el).style.display = 'none';
+        else
+            document.getElementById(el).style.display = 'block';
+    }
+</script>
+
+<% UsuarioModel usuarioModel = (UsuarioModel) session.getAttribute("usuario"); %>
+
+
 <div class="pai-de-todos">
-    <div class="menu-superior">
-        <div class="logo">
-            <img id="logo" src="assets/image/Logo-For-Best-60x72.png">
-
-        </div>
-        <div class="campo">
-            <input class="procura" type="text" placeholder="Procurar Amigos">
-            <a class="lupa" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            <div class="icons">
-
-<<<<<<< HEAD
-                <a class="icones-topright" href="perfil.jsp?id=?"><i class="fa fa-users"
-                                                                 aria-hidden="true"></i></a>
-=======
-                <a class="icones-topright" href="amigos.html"><i class="fa fa-users" aria-hidden="true"></i></a>
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
-                <a class="icones-topright" href="notificacoes.html"><i class="fa fa-bell"
-                                                                       aria-hidden="true"></i></a>
-                <a class="icones-topright" href="configuracoes.html"><i class="fa fa-cog"
-                                                                        aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
+    <jsp:include page="menu_superior.jsp"></jsp:include>
     <div class="feed-geral">
-        <h1>Bem Vindo <%usuarioModel.getNome();%></h1>
+
         <div class="posts-criar">
             <div class="criar-post">
-                <% if(session.getAttribute("usuario") != null){%>
+                <% if (session.getAttribute("usuario") != null) {%>
                 <div class="imagem-usuario">
-<<<<<<< HEAD
-                    <a class="fotoperfil" href="perfil.jsp?id=<%=usuarioModel.getCodigo()%>"><img class="perfil"
-                                                                 src="assets/image/usuario-ruan.jpg">
+                    <a class="fotoperfil" href="perfil.jsp?id=<%=usuarioModel.getCodigo()%>"><img class="perfil" src="usuario_get_imagem.jsp?id=<%=usuarioModel.getCodigo()%>">
                     </a>
-=======
-                    <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                  src="assets/image/usuario-ruan.jpg"></a>
-
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
                 </div>
                 <%}%>
-                <form action="post_acao_postar.jsp" method="POST">
+                <form action="post_acao_postar.jsp?id=<%=usuarioModel.getCodigo()%>" method="post">
 
                     <div>
-                        <input class="post-titulo-criar" type="text" name="post-assunto"
-                               placeholder="Assunto">
+                        <input class="post-titulo-criar" type="text" name="post-assunto" placeholder="Assunto">
                     </div>
 
                     <div class="descricao-post-div">
-<<<<<<< HEAD
                         <input class="post-descricao-criar" type="text" name="post-descricao"
-=======
-                        <input class="post-descricao-criar" type="text" name="descricao-post"
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
                                placeholder="Escreva aqui sua postagem"></div>
 
                     <div class="coluna-criar-post">
                         <input class="post-criar" type="submit" value="Publicar" name="criar-post">
 
-<<<<<<< HEAD
                         <a class="icones-imagem" href="#"><label
                                 class="foto-video">Foto/Vídeo </label><i
-=======
-                        <a class="icones-imagem" href="#"><label class="foto-video">Foto/Vídeo </label><i
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
                                 class="fa fa-picture-o" aria-hidden="true"></i></a>
                     </div>
                 </form>
-
             </div>
         </div>
+
         <div class="tabela-posts-feed">
 
-<<<<<<< HEAD
-            <% ArrayList<PostModel> posts = (ArrayList<PostModel>) PostDAO.retornarPosts(); %>
+            <% ArrayList<PostModel> posts = (ArrayList<PostModel>) PostDAO.retornarPosts(0); %>
             <% for (PostModel post : posts) { %>
-=======
-                <div class="conteudo">
-                    <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
-                    </div>
-                    <div class="texto-post-tabela">
-                        <p0 class="assunto-e-texto"> Texto aqui!</p0>
-                    </div>
-                    <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg"
-                                                                aria-hidden="true"><label
-                                class="apoiar">Doar</label></i></a>
-                    </div>
-                </div>
-                <div class="imagem-nome-usuario">
-                    <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
-                    </div>
-                    <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
-                    </div>
-                </div>
-            </div>
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
             <div class="post-usuario">
 
                 <div class="conteudo">
@@ -152,112 +76,34 @@
                         </p>
                     </div>
                     <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"><%=post.getDescricao()%>
-                        </p>
+                        <p class="assunto-e-texto"><%=post.getDescricao()%></p>
                     </div>
                     <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-<<<<<<< HEAD
-                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg"
-                                                                aria-hidden="true"><label
-                                class="apoiar">Doar</label></i></a>
-=======
-                        <label class="apoiar"><a class="icones-post-doar" href="#"><i
-                                class="fa fa-credit-card-alt fa-lg" aria-hidden="true">Doar</i></a> </label>
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
+                        <a><%=post.getApoios()%></a>
+                        <label class="apoiar"> <a type="button" class="icones-post-apoiar" href="post_acao_apoiar.jsp?id=<%=post.getCodigo()%>"> <i class="fa fa-handshake-o fa-lg" aria-hidden="true">Apoiar</i></a></label>
+                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg" aria-hidden="true"><label class="apoiar">Doar</label></i></a>
+                        <% if (usuarioModel.getCodigo() == post.getUsuario().getCodigo()) { %>
+                            <div class="alterar-excluir">
+                                <a type="button" href="posts_alterar.jsp?id=<%=post.getCodigo()%>"><i class="fa fa-pencil"></i></a>
+                                <a class="icon-excluir" href="post_acao_excluir.jsp?id=<%=post.getCodigo()%>"><i class="fa fa-trash"></i></a>
+                            </div>
+                        <% } %>
                     </div>
                 </div>
                 <div class="imagem-nome-usuario">
                     <div class="imagem-usuario">
-<<<<<<< HEAD
-                        <a class="fotoperfil" href="perfil.jsp"><img id="perfil" src="usuario-ruan.jpg"></a>
-=======
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
+                        <a class="fotoperfil" href="perfil.jsp?id=<%= post.getUsuario().getCodigo()%>"><img class="perfil" src="usuario_get_imagem.jsp?id=<%=post.getUsuario().getCodigo()%>"></a>
                     </div>
                     <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.jsp?id=3<%= post.getUsuario().getCodigo()%>"> <%= post.getUsuario().getNome()%></a>
+                        <a class="usuario-nome"
+                           href="perfil.jsp?id=<%= post.getUsuario().getCodigo()%>"><%= post.getUsuario().getNome()%>
+                        </a>
                     </div>
                 </div>
             </div>
             <% } %>
-
-<<<<<<< HEAD
         </div>
     </div>
 </div>
-
-
-=======
-                <div class="conteudo">
-                    <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
-                    </div>
-                    <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
-                    </div>
-                    <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg"
-                                                                aria-hidden="true"><label
-                                class="apoiar">Doar</label></i></a>
-                    </div>
-                </div>
-                <div class="imagem-nome-usuario">
-                    <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
-                    </div>
-                    <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post-usuario">
-
-                <div class="conteudo">
-                    <div class="assunto-post-tabela">
-                        <p class="assunto-e-texto"> Assunto aqui!</p>
-                    </div>
-                    <div class="texto-post-tabela">
-                        <p class="assunto-e-texto"> Texto aqui!</p>
-                    </div>
-                    <div class="icones-post-tabela">
-                        <a class="icones-post-apoiar" href="#"><i class="fa fa-handshake-o fa-lg"
-                                                                  aria-hidden="true"><label
-                                class="apoiar">Apoiar</label></i></a>
-
-                        <a class="icones-post-doar" href="#"><i class="fa fa-credit-card-alt fa-lg"
-                                                                aria-hidden="true"><label
-                                class="apoiar">Doar</label></i></a>
-                    </div>
-                </div>
-                <div class="imagem-nome-usuario">
-                    <div class="imagem-usuario">
-                        <a class="fotoperfil" href="perfil.html"><img class="perfil"
-                                                                      src="assets/image/usuario-ruan.jpg"></a>
-                    </div>
-                    <div class="usuario-nome">
-                        <a class="usuario-nome" href="perfil.html">Ruan Pasta</a>
-                    </div>
-                </div>
-                <i class="fa fa-bars" aria-hidden="true"></i>
-                <i class="fa fa-bell" aria-hidden="true"></i>
-                <i class="fa fa-cog" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-
-</div>
->>>>>>> 9e1df73692b303240e78f4eddc446bd30fdf3656
 </body>
-
 </html>

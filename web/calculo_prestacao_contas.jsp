@@ -14,16 +14,18 @@
 <%
     double total = 0;
     double informado = 0;
+    int contador = 0;
 
     UsuarioModel usuario = UsuarioDAO.buscarUsuarioPorId(Integer.parseInt(request.getParameter("id")));
     PostModel post = PostDAO.buscarPostPorId(Integer.parseInt(request.getParameter("id")));
 
     for (DoacaoModel doacao : post.getDoacoes()) {
-        total += DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()).get(Integer.parseInt("?")).getValor();
+        total += DoacaoDAO.buscarDoacaoPorIdDoPost(post.getCodigo()).get(1).getValor();
     }
     if(informado != total) {
         usuario.setSenha("snAndromedaCapivara");
         response.sendRedirect("index.jsp");
+        //tem que por o endereço da pagina.
         //o usuario vai ter a senha alterada para saAndromedaCapivara e ela vai ser atualizada não permitindo o acesso deste.
     }
 
