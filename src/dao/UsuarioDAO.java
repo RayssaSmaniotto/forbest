@@ -2,6 +2,7 @@ package dao;
 
 import database.Conexao;
 
+import java.io.InputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,6 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import jdk.internal.util.xml.impl.Input;
 import model.UsuarioModel;
 
 /**
@@ -30,39 +32,47 @@ public class UsuarioDAO {
         }
     }
 
-    public static int alterar(UsuarioModel usuarioModel) {
+    public static int alterar(UsuarioModel usuarioModel, InputStream aImagem) {
         try {
             String sql = "UPDATE usuarios SET nome = ?, sobrenome = ?, idade = ?, data_nascimento = ?, email = ?, "
-                    + "razao_social = ?, cnpj = ?, cpf = ?, cep = ?, numero = ?, logradouro = ?, estado = ?, cidade = ?, bairro = ?, "
-                    + "senha = ?, celular = ?, genero = ?, biografia = ?, foto = ?, galeria = ?, url_facebook = ?, "
-                    + "url_linkedin = ?, url_twitter = ?, url_instagram = ?, numero_local = ? WHERE codigo = ?";
+                    + "cpf = ?, cep = ?, numero = ?, logradouro = ?, estado = ?, cidade = ?, bairro = ?, "
+                    + "senha = ?, celular = ?, genero = ?, biografia = ?, url_facebook = ?, "
+                    + "url_linkedin = ?, url_twitter = ?, url_instagram = ? ";
+            if(aImagem != null){
+                sql += ", foto = ?";
+            }
+            sql += "\nWHERE codigo = ?";
 
             PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
-            ps.setString(1, usuarioModel.getNome());
-            ps.setString(2, usuarioModel.getSobrenome());
-            ps.setInt(3, usuarioModel.getIdade());
-            ps.setDate(4, usuarioModel.getDataNascimento());
-            ps.setString(5, usuarioModel.getEmail());
-            ps.setString(6, usuarioModel.getRazaoSocial());
-            ps.setString(7, usuarioModel.getCnpj());
-            ps.setString(8, usuarioModel.getCpf());
-            ps.setString(9, usuarioModel.getCep());
-            ps.setInt(10, usuarioModel.getNumero());
-            ps.setString(11, usuarioModel.getLogradouro());
-            ps.setString(12, usuarioModel.getEstado());
-            ps.setString(13, usuarioModel.getCidade());
-            ps.setString(14, usuarioModel.getBairro());
-            ps.setString(15, usuarioModel.getSenha());
-            ps.setString(16, usuarioModel.getCelular());
-            ps.setString(17, String.valueOf(usuarioModel.getGenero()));
-            ps.setString(18, usuarioModel.getBiografia());
-            ps.setBlob(19, usuarioModel.getFoto());
-            ps.setBlob(20, usuarioModel.getGaleria());
-            ps.setString(21, usuarioModel.getUrlFacebook());
-            ps.setString(22, usuarioModel.getUrlLinkedin());
-            ps.setString(23, usuarioModel.getUrlTwitter());
-            ps.setString(24, usuarioModel.getUrlInstagram());
-            ps.setInt(25, usuarioModel.getNumeroLocal());
+            int posicao = 1;
+            ps.setString(posicao++, usuarioModel.getNome());
+            ps.setString(posicao++, usuarioModel.getSobrenome());
+            ps.setInt(posicao++, usuarioModel.getIdade());
+            ps.setDate(posicao++, usuarioModel.getDataNascimento());
+            ps.setString(posicao++, usuarioModel.getEmail());
+            ps.setString(posicao++, usuarioModel.getCpf());
+            ps.setString(posicao++, usuarioModel.getCep());
+            ps.setInt(posicao++, usuarioModel.getNumero());
+            ps.setString(posicao++, usuarioModel.getLogradouro());
+            ps.setString(posicao++, usuarioModel.getEstado());
+            ps.setString(posicao++, usuarioModel.getCidade());
+            ps.setString(posicao++, usuarioModel.getBairro());
+            ps.setString(posicao++, usuarioModel.getSenha());
+            ps.setString(posicao++, usuarioModel.getCelular());
+            ps.setString(posicao++, String.valueOf(usuarioModel.getGenero()));
+            ps.setString(posicao++, usuarioModel.getBiografia());
+            ps.setString(posicao++, usuarioModel.getUrlFacebook());
+            ps.setString(posicao++, usuarioModel.getUrlLinkedin());
+            ps.setString(posicao++, usuarioModel.getUrlTwitter());
+            ps.setString(posicao++, usuarioModel.getUrlInstagram());
+
+            if(aImagem !=null){
+                ps.setBlob(posicao++, aImagem);
+            }
+
+            ps.setInt(posicao++, usuarioModel.getCodigo());
+
+            return ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -71,38 +81,15 @@ public class UsuarioDAO {
         return -1;
     }
 
-    public static int inserir(UsuarioModel usuarioModel) {
-        String sql = "INSERT INTO usuarios (nome, sobrenome, idade, data_nascimento, email, razao_social, cnpj, cpf, cep, "
-                + "numero, logradouro, estado, cidade, bairro, senha, celular, genero, biografia, foto, galeria, "
-                + "url_facebook, url_linkedin, url_twitter, url_instagram, numero_local) VALUES (?, ?, ?,  ?,  ?, ?, ?, ?, ?, ?, ?, "
-                + "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    public static int inserir(UsuarioModel usuarioModel, InputStream aImagem) {
+        String sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?);";
+
+
         try {
             PreparedStatement ps = Conexao.conectar().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, usuarioModel.getNome());
-            ps.setString(2, usuarioModel.getSobrenome());
-            ps.setInt(3, usuarioModel.getIdade());
-            ps.setDate(4, usuarioModel.getDataNascimento());
-            ps.setString(5, usuarioModel.getEmail());
-            ps.setString(6, usuarioModel.getRazaoSocial());
-            ps.setString(7, usuarioModel.getCnpj());
-            ps.setString(8, usuarioModel.getCpf());
-            ps.setString(9, usuarioModel.getCep());
-            ps.setInt(10, usuarioModel.getNumero());
-            ps.setString(11, usuarioModel.getLogradouro());
-            ps.setString(12, usuarioModel.getEstado());
-            ps.setString(13, usuarioModel.getCidade());
-            ps.setString(14, usuarioModel.getBairro());
-            ps.setString(15, usuarioModel.getSenha());
-            ps.setString(16, usuarioModel.getCelular());
-            ps.setString(17, String.valueOf(usuarioModel.getGenero()));
-            ps.setString(18, usuarioModel.getBiografia());
-            ps.setBlob(19, usuarioModel.getFoto());
-            ps.setBlob(20, usuarioModel.getGaleria());
-            ps.setString(21, usuarioModel.getUrlFacebook());
-            ps.setString(22, usuarioModel.getUrlLinkedin());
-            ps.setString(23, usuarioModel.getUrlTwitter());
-            ps.setString(24, usuarioModel.getUrlInstagram());
-            ps.setInt(25, usuarioModel.getNumeroLocal());
+            ps.setString(2, usuarioModel.getEmail());
+            ps.setString(3, usuarioModel.getSenha());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
@@ -233,4 +220,56 @@ public class UsuarioDAO {
         }
         return null;
     }
+
+    public byte[] recuperarImagem(int codigo){
+        Conexao conexao = new Conexao();
+        byte[] imagem = null;
+
+        try{
+            String sql = "SELECT foto FROM usuarios WHERE codigo =?";
+            Statement statement = conexao.conectar().createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                imagem = rs.getBytes("foto");
+            }
+            statement.close();
+
+        }catch (SQLException sqle) {
+            sqle.printStackTrace();
+        }finally {
+            Conexao.desconectar();
+        }
+        return imagem;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

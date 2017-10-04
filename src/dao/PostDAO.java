@@ -29,7 +29,7 @@ public class PostDAO {
         }
     }
 
-    public static void alterar(PostModel postModel) {
+    public static int alterar(PostModel postModel) {
         try {
             String sql = "UPDATE posts SET descricao = ?,titulo =?, data_evento =?, codigo_usuario =?, "
                     + "apoios =?,status = ? WHERE codigo = ?";
@@ -42,22 +42,40 @@ public class PostDAO {
             ps.setInt(5, postModel.getApoios());
             ps.setString(6, postModel.getStatus());
             ps.setInt(7, postModel.getCodigo());
-            int resultado = ps.executeUpdate();
+            //int resultado = ps.executeUpdate();
+            ps.executeUpdate();
 
-         } catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             Conexao.desconectar();
         }
-
+        return -1;
     }
+
+    public static int apoiar(PostModel postModel) {
+        try {
+            String sql = "UPDATE posts SET apoios =? WHERE codigo = ?";
+            PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
+            int apoios = postModel.getApoios()+1;
+            ps.setInt(1, apoios);
+            ps.setInt(2, postModel.getCodigo());
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.desconectar();
+        }
+        return -1;
+    }
+
 
     public static int inserir(PostModel postModel) {
         String sql = "INSERT INTO posts (descricao,titulo, data_evento, codigo_usuario, "
                 + "apoios, status) VALUES (?,?,?,?,?,?);";
         try {
-            PreparedStatement ps = Conexao.conectar()
-                    .prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = Conexao.conectar().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             ps.setString(1, postModel.getDescricao());
             ps.setString(2, postModel.getTitulo());
@@ -79,13 +97,21 @@ public class PostDAO {
         return -1;
     }
 
-    public static List<PostModel> retornarPosts() {
+    public static List<PostModel> retornarPosts(int aUsuario) {
         List<PostModel> posts = new ArrayList<>();
         String sql = "SELECT codigo, descricao,titulo, data_evento, codigo_usuario, status, apoios FROM posts";
+        if (aUsuario > 0) {
+            sql += "\n WHERE codigo_usuario = ?";
+        }
+        sql += "\n ORDER BY codigo DESC ";
+
         try {
-            Statement statement = Conexao.conectar().createStatement();
-            statement.execute(sql);
-            ResultSet resultSet = statement.getResultSet();
+            PreparedStatement ps = Conexao.conectar().prepareStatement(sql);
+            if (aUsuario > 0) {
+                ps.setInt(1, aUsuario);
+            }
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
             while (resultSet.next()) {
                 PostModel post = new PostModel();
                 post.setCodigo(resultSet.getInt("codigo"));
@@ -127,28 +153,6 @@ public class PostDAO {
                 post.setApoios(resultSet.getInt("apoios"));
             }
          } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            Conexao.desconectar();
-        }
-        return post;
-    }
-
-    public static PostModel retornarQuantidadeLikes(int codigo) {
-        PostModel post = null;
-        String sql = "select COUNT(apoios) as likes FROM post  WHERE id = ?";
-
-        try {
-            PreparedStatement ps = Conexao.conectar().prepareCall(sql);
-            ps.setInt(1, codigo);
-            ps.execute();
-            ResultSet resultSet = ps.getResultSet();
-            while (resultSet.next()) {
-                post = new PostModel();
-                post.setCodigo(codigo);
-                post.setApoios(resultSet.getInt("apoios"));
-            }
-        } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             Conexao.desconectar();
